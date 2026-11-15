@@ -1,0 +1,201 @@
+{
+ "unit": "win-probability points per average-importance ball",
+ "verdicts": {
+  "batter": {
+   "top 10": {
+    "better under pressure": {
+     "n": 3,
+     "pct": 30.0
+    },
+    "worse under pressure": {
+     "n": 1,
+     "pct": 10.0
+    },
+    "no clear difference": {
+     "n": 6,
+     "pct": 60.0
+    },
+    "players": 10
+   },
+   "top 10 + 2 alternates": {
+    "better under pressure": {
+     "n": 4,
+     "pct": 33.3
+    },
+    "worse under pressure": {
+     "n": 1,
+     "pct": 8.3
+    },
+    "no clear difference": {
+     "n": 7,
+     "pct": 58.3
+    },
+    "players": 12
+   },
+   "all eligible": {
+    "better under pressure": {
+     "n": 12,
+     "pct": 16.9
+    },
+    "worse under pressure": {
+     "n": 6,
+     "pct": 8.5
+    },
+    "no clear difference": {
+     "n": 53,
+     "pct": 74.6
+    },
+    "players": 71
+   },
+   "league reference": "better under pressure"
+  },
+  "bowler": {
+   "top 10": {
+    "better under pressure": {
+     "n": 2,
+     "pct": 20.0
+    },
+    "worse under pressure": {
+     "n": 0,
+     "pct": 0.0
+    },
+    "no clear difference": {
+     "n": 8,
+     "pct": 80.0
+    },
+    "players": 10
+   },
+   "top 10 + 2 alternates": {
+    "better under pressure": {
+     "n": 2,
+     "pct": 16.7
+    },
+    "worse under pressure": {
+     "n": 0,
+     "pct": 0.0
+    },
+    "no clear difference": {
+     "n": 10,
+     "pct": 83.3
+    },
+    "players": 12
+   },
+   "all eligible": {
+    "better under pressure": {
+     "n": 6,
+     "pct": 7.4
+    },
+    "worse under pressure": {
+     "n": 8,
+     "pct": 9.9
+    },
+    "no clear difference": {
+     "n": 67,
+     "pct": 82.7
+    },
+    "players": 81
+   },
+   "league reference": "worse under pressure"
+  }
+ },
+ "forward_test": {
+  "batter": {
+   "eligible only, >= 20 each period": {
+    "players": 53,
+    "gap_rho": [
+     0.08643767134333172,
+     -0.21243955341747472,
+     0.34382802501557475
+    ],
+    "normal_rho": [
+     0.16118368005160458,
+     -0.13248408963692276,
+     0.4179365298798218
+    ],
+    "gap_coef_for_future_pressure": [
+     0.0570575419888157,
+     -0.3045343465039884,
+     0.33613984073689596
+    ],
+    "normal_coef": 0.4029793282322687
+   },
+   "pressure balls >= 20 each period (main)": {
+    "players": 59,
+    "gap_rho": [
+     0.10847457627118645,
+     -0.14865875050064709,
+     0.34273756949122114
+    ],
+    "normal_rho": [
+     0.2639976621858563,
+     -0.026988816778242303,
+     0.5010369781722963
+    ],
+    "gap_coef_for_future_pressure": [
+     0.011543812939117552,
+     -0.298344552030046,
+     0.28062284852249236
+    ],
+    "normal_coef": 0.20403725805130596
+   }
+  },
+  "bowler": {
+   "eligible only, >= 20 each period": {
+    "players": 63,
+    "gap_rho": [
+     -0.10032642089093703,
+     -0.3423707552076063,
+     0.1394193445701022
+    ],
+    "normal_rho": [
+     0.36904761904761907,
+     0.1338794371392383,
+     0.5781247956127334
+    ],
+    "gap_coef_for_future_pressure": [
+     0.015053350272206037,
+     -0.19398055857401394,
+     0.27336677552929584
+    ],
+    "normal_coef": 0.5889188756499545
+   },
+   "pressure balls >= 20 each period (main)": {
+    "players": 65,
+    "gap_rho": [
+     -0.11057692307692307,
+     -0.33784261281290057,
+     0.13679354798084134
+    ],
+    "normal_rho": [
+     0.34628496503496503,
+     0.11251084597737196,
+     0.5540764973661694
+    ],
+    "gap_coef_for_future_pressure": [
+     -0.02195088411529836,
+     -0.23963219397614094,
+     0.27055006991436586
+    ],
+    "normal_coef": 0.7266426627249836
+   }
+  }
+ },
+ "eligibility": {
+  "bat": {
+   "ranked": 881,
+   "eligible": 71,
+   "fail_own_share": 761,
+   "fail_matches_2025_26": 590,
+   "exposure_floor_high_pressure_balls": 50,
+   "fail_exposure_floor": 793
+  },
+  "bowl": {
+   "ranked": 640,
+   "eligible": 81,
+   "fail_own_share": 541,
+   "fail_matches_2025_26": 418,
+   "exposure_floor_high_pressure_balls": 50,
+   "fail_exposure_floor": 543
+  }
+ }
+}

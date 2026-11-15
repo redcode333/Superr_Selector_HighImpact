@@ -1,0 +1,152 @@
+/* 19th over: hero band and controls (ported from _handoff/design/Main.dc.html; colours mapped to the design system) */
+.hero-section { padding-bottom: 40px; }
+.hero { padding: 22px 0 30px; }
+.hero-inner { display: grid; gap: 22px; }
+.demo-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.07); border-radius: 12px; padding: 10px 12px; min-height: 56px; }
+.demo-hint { font-size: 14px; color: #c9cfe3; flex: 1 1 280px; }
+.demo-cap { flex: 1 1 320px; display: grid; gap: 6px; min-width: 0; }
+.demo-caption { font-size: 16px; font-weight: 600; }
+.demo-steps { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.demo-steps span { height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.22); }
+.demo-steps span.on { background: var(--pink); }
+.demo-n { font-size: 18px; color: #c9cfe3; }
+
+.btn { font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; border: 0; border-radius: 999px; padding: 11px 20px; min-height: 44px; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.15s, box-shadow 0.15s, background 0.15s; }
+.btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(228, 0, 124, 0.35); }
+.btn:active { transform: translateY(1px); box-shadow: none; }
+.btn-light { background: #fff; color: var(--ink); }
+.btn-pink { background: var(--pink); color: #fff; }
+.btn-ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 1.5px #fff; }
+.btn-ghost:hover { background: rgba(255, 255, 255, 0.08); }
+.btn[aria-disabled="true"] { opacity: 0.75; cursor: progress; }
+.band-navy :focus-visible { outline-color: #f381aa; }
+
+.hero-grid { display: grid; gap: 28px; }
+@media (min-width: 1000px) { .hero-grid { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); } }
+.hero-left, .hero-right { display: grid; gap: 16px; align-content: start; min-width: 0; }
+.hero-title { display: grid; gap: 4px; }
+.hero-kicker { font-size: 14px; color: #c9cfe3; }
+.hero-title h2 { font-size: clamp(40px, 5.6vw, 64px); line-height: 0.95; }
+.scoreboard { display: flex; flex-wrap: wrap; gap: 8px; }
+.sb-box { background: rgba(0, 0, 0, 0.28); border-radius: 12px; padding: 10px 16px; display: grid; min-width: 96px; }
+.sb-l { font-size: 12.5px; color: #c9cfe3; }
+.sb-v { font-size: 48px; font-weight: 700; line-height: 1; }
+.sb-need { color: #f381aa; }
+.sb-status { flex: 1 1 180px; align-content: center; gap: 2px; }
+.sb-text { font-size: 16px; font-weight: 600; }
+.tone-bat { color: #f381aa; }
+.tone-bowl { color: #9baed7; }
+.overs { display: grid; gap: 10px; }
+.over-row { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; align-items: center; }
+.over-who { display: grid; }
+.over-n { font-size: 14px; font-weight: 600; }
+.over-by { font-size: 12.5px; color: #c9cfe3; }
+.over-balls { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.ball { width: 38px; height: 38px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--f-num); font-weight: 700; font-size: 19px; }
+/* meaning: blue = bowler on top (dot, wicket), pink = batter on top (runs, boundaries) */
+.b-dot { background: #c5cfe6; color: var(--ink); }
+.b-run { background: #f6cddb; color: var(--ink); }
+.b-bnd { background: var(--pink); color: #fff; }
+.b-wkt { background: var(--blue); color: #fff; box-shadow: 0 0 0 2px #fff; }
+.b-extra { background: transparent; color: #fff; box-shadow: inset 0 0 0 1.5px #c5cfe6; font-size: 15px; }
+.b-pad { background: transparent; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.24); }
+.ball-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: #c9cfe3; list-style: none; margin: 0; padding: 0; }
+.ball-legend li { display: inline-flex; align-items: center; gap: 6px; }
+.ball-key { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.ball-key.b-wkt { box-shadow: 0 0 0 1.5px #fff; }
+
+.panel { background: rgba(255, 255, 255, 0.07); border-radius: 16px; padding: 18px; display: grid; gap: 10px; }
+.pb-head { display: flex; align-items: center; gap: 12px; }
+.pb-head > div { display: grid; }
+.pb-l { font-size: 13px; color: #c9cfe3; }
+.pb-name { font-size: 20px; font-weight: 600; }
+.pb-pct { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.pb-big { font-size: clamp(64px, 7vw, 84px); font-weight: 700; line-height: 0.9; color: #fff; }
+.pb-base { font-size: 14px; color: #e3e7f3; }
+.pb-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+.spin { animation: spin 0.6s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.panel-sims { grid-template-columns: 150px minmax(0, 1fr); gap: 16px; align-items: center; }
+.dots { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; }
+.dot { width: 100%; aspect-ratio: 1; border-radius: 50%; background: rgba(255, 255, 255, 0.13); transition: background 0.25s; }
+.d-def { background: #728dc8; }
+.d-chase { background: var(--pink); }
+.d-tie { background: #f1f1f4; }
+.sims-text { display: grid; gap: 4px; }
+.sims-head { font-size: 36px; font-weight: 700; line-height: 1; }
+.sims-body { font-size: 13.5px; color: #e3e7f3; line-height: 1.45; }
+
+/* walkthrough highlight: a pulsing pink ring, or a still ring under reduced motion */
+.hl-pulse { animation: pulse 1.3s ease-in-out infinite; }
+.hl-static { box-shadow: 0 0 0 3px var(--pink); }
+@keyframes pulse { 0%, 100% { box-shadow: 0 0 0 3px var(--pink); } 50% { box-shadow: 0 0 0 7px rgba(228, 0, 124, 0.25); } }
+
+.hero-below { display: grid; gap: 22px; margin-top: 24px; align-items: start; }
+@media (min-width: 1000px) { .hero-below { grid-template-columns: minmax(300px, 380px) minmax(0, 1fr); } }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+.card h3 { font-size: 22px; }
+.sit { display: grid; gap: 14px; }
+.sit hr { border: 0; height: 1px; background: var(--border); margin: 2px 0; width: 100%; }
+.stepper-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 14px; }
+.stepper { display: flex; align-items: center; gap: 8px; }
+.step { font: inherit; font-size: 22px; font-weight: 600; cursor: pointer; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #b9c0d6; background: #fff; color: var(--ink); transition: border-color 0.15s, background 0.15s; }
+.step:hover:not(:disabled) { border-color: var(--pink); background: var(--pink-wash); }
+.step:active:not(:disabled) { transform: translateY(1px); }
+.step:disabled { opacity: 0.4; cursor: not-allowed; }
+.step-v { font-size: 34px; font-weight: 700; width: 44px; text-align: center; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip-btn { font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; border: 0; border-radius: 999px; padding: 8px 14px; min-height: 40px; background: #e4e8f1; color: var(--ink); transition: background 0.15s, box-shadow 0.15s; }
+.chip-btn:hover { box-shadow: inset 0 0 0 1.5px var(--pink); }
+.chip-btn:active { transform: translateY(1px); }
+.chip-btn.on { background: var(--ink); color: #fff; }
+.swing { display: grid; gap: 6px; }
+.swing-l, .swing-note { font-size: 13px; color: var(--muted); }
+.swing-v { font-size: 40px; font-weight: 700; line-height: 1; }
+.swing-u { font-size: 18px; font-weight: 500; color: var(--muted); }
+.swing-track { height: 8px; border-radius: 4px; background: #e2e6f0; overflow: hidden; }
+.swing-bar { height: 100%; background: var(--ink); border-radius: 4px; }  /* neither side: ink, not pink or blue */
+
+.blist { display: grid; gap: 4px; padding: 18px 20px; }
+.blist-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; padding-bottom: 8px; }
+.blist-head span { font-size: 13px; color: var(--muted); }
+.brows { list-style: none; margin: 0; padding: 0; }
+.brow { font: inherit; color: inherit; text-align: left; cursor: pointer; width: 100%; border: 0; background: transparent; display: grid;
+  grid-template-columns: 26px minmax(150px, 1.1fr) minmax(160px, 2fr) 112px; grid-template-areas: "pos id mid pct"; gap: 12px; align-items: center;
+  padding: 10px 10px 10px 8px; border-bottom: 1px solid #e4e8f1; border-radius: 10px; transition: background 0.15s; }
+.brow:hover { background: #f6f7fb; }
+.brow:active { background: #eceef4; }
+.brow.on { background: #eef1f9; box-shadow: inset 0 0 0 2px var(--blue); }
+.brow-pos { grid-area: pos; font-size: 20px; color: var(--muted); text-align: right; }
+.brow-id { grid-area: id; display: grid; gap: 2px; min-width: 0; }
+.brow-name { font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+.brow-on { font-size: 12px; font-weight: 600; background: var(--blue); color: #fff; border-radius: 999px; padding: 1px 8px; }
+.brow-tag { font-size: 12.5px; color: var(--muted); }
+.brow-mid { grid-area: mid; display: grid; gap: 6px; min-width: 0; }
+.brow-track { display: block; height: 14px; background: #e4e8f1; border-radius: 7px; position: relative; }
+.brow-bar { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 7px; background: #728dc8; }
+.brow-bar.on { background: var(--blue); }
+.brow-bar.few { background: #c5cfe6; }
+.brow-base { position: absolute; top: -3px; height: 20px; width: 2px; margin-left: -1px; overflow: visible; }
+.brow-stats { display: flex; flex-wrap: wrap; gap: 2px 12px; font-size: 12.5px; color: #353f63; }
+.brow-pct { grid-area: pct; text-align: right; display: grid; gap: 2px; }
+.brow-big { font-size: 28px; font-weight: 700; line-height: 1; }
+.brow-delta { font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.tone-bowl-text { color: var(--blue); }
+.tone-bat-text { color: var(--pink-text); }
+.hero-notes { display: grid; gap: 6px; margin-top: 18px; font-size: 13.5px; color: var(--muted); }
+.hero-notes p { max-width: 56ch; }
+
+@media (max-width: 640px) {
+  .over-row { grid-template-columns: 1fr; gap: 6px; }
+  .ball { width: 34px; height: 34px; font-size: 17px; }
+  .sb-box { min-width: 0; flex: 1 1 28%; padding: 8px 12px; }
+  .sb-v { font-size: 40px; }
+  .sb-status { flex-basis: 100%; }
+  .panel-sims { grid-template-columns: 110px minmax(0, 1fr); }
+  .brow { grid-template-columns: 22px minmax(0, 1fr) auto; grid-template-areas: "pos id pct" "pos mid mid"; gap: 6px 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover, .btn:active, .step:active, .chip-btn:active { transform: none; }
+  .dot { transition: none; }
+  .spin, .hl-pulse { animation: none; }
+}

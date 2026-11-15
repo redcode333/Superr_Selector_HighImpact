@@ -1,0 +1,84 @@
+# Whitelist: ignore everything at the root, then allow only what is listed below.
+/*
+
+!/.gitignore
+!/README.md
+!/run_all.py
+!/requirements.txt
+
+# pipeline code
+!/superr/
+/superr/*
+!/superr/src/
+!/superr/requirements.txt
+# the scripts run_all.py calls before phase 0 (code only, no data)
+!/superr/parse_cricsheet.py
+!/superr/build_foundation.py
+!/superr/match_cricsheet.py
+!/superr/align_cricsheet.py
+!/superr/build_grounds.py
+!/superr/enrich_context.py
+!/superr/out/
+/superr/out/*
+!/superr/out/fetch_context.py
+
+# machine outputs that dashboard/scripts/build_data.py and `run_all.py --floor 50 --verify-only` read (no report documents)
+!/superr/reports/
+/superr/reports/*
+!/superr/reports/final_v2/
+/superr/reports/final_v2/*
+!/superr/reports/final_v2/final_top10.csv
+!/superr/reports/final_v2/alternates.csv
+!/superr/reports/final_v2/key_numbers.json
+!/superr/reports/final_v2/phase8_summary.json
+!/superr/reports/final_v2/pressure_gap_top10.csv
+!/superr/reports/final_v2/pressure_gap_all_eligible.csv
+!/superr/reports/final_v2/verification.txt
+!/superr/reports/final_v2/reference/
+/superr/reports/final_v2/reference/*
+!/superr/reports/final_v2/reference/final_top10.csv
+!/superr/reports/final_v2/reference/key_numbers.json
+# v1 top 10 (read for the v1 -> v2 changes), the forward test, and the floor sensitivity table: single machine-output files
+!/superr/reports/final/
+/superr/reports/final/*
+!/superr/reports/final/final_top10.csv
+!/superr/reports/phase5_v2/
+/superr/reports/phase5_v2/*
+!/superr/reports/phase5_v2/phase6c_gap_forward.json
+!/outputs/
+/outputs/*
+!/outputs/phase7_exposure_floor/
+/outputs/phase7_exposure_floor/*
+!/outputs/phase7_exposure_floor/floor_sensitivity.csv
+
+# dashboard source only
+!/dashboard/
+/dashboard/*
+!/dashboard/src/
+!/dashboard/scripts/
+!/dashboard/public/
+/dashboard/public/*
+!/dashboard/public/data/
+!/dashboard/index.html
+!/dashboard/package.json
+!/dashboard/package-lock.json
+!/dashboard/vite.config.ts
+!/dashboard/tsconfig.json
+!/dashboard/.impeccable/
+/dashboard/.impeccable/*
+!/dashboard/.impeccable/config.json
+
+# never, wherever they sit
+__pycache__/
+*.pyc
+*.env
+.env*
+*.log
+*.zip
+*.bundle
+*.parquet
+*.map
+node_modules/
+dist/
+screenshots/
+_handoff/

@@ -1,0 +1,1029 @@
+PASS	top 10 batters (names and order)	
+PASS	top 10 bowlers (names and order)	
+PASS	alternates/bat/0/pct_top10	
+PASS	alternates/bat/0/player	
+PASS	alternates/bat/0/rank	
+PASS	alternates/bowl/0/pct_top10	
+PASS	alternates/bowl/0/player	
+PASS	alternates/bowl/0/rank	
+PASS	bias_corrections/dew_4way/coef_per_degC	
+PASS	bias_corrections/dew_4way/hi95	
+PASS	bias_corrections/dew_4way/lo95	
+PASS	bias_corrections/dew_4way/n_balls	
+PASS	bias_corrections/dew_4way/n_matches	
+PASS	bias_corrections/dew_4way/p	
+PASS	bias_corrections/dew_4way/spin:dpd (all)	
+PASS	bias_corrections/dew_4way/spin:inn2:lights	
+PASS	bias_corrections/dew_4way/term	
+PASS	bias_corrections/opponent_beta/bat/2022/0	
+PASS	bias_corrections/opponent_beta/bat/2022/1	
+PASS	bias_corrections/opponent_beta/bat/2022/2	
+PASS	bias_corrections/opponent_beta/bat/2023/0	
+PASS	bias_corrections/opponent_beta/bat/2023/1	
+PASS	bias_corrections/opponent_beta/bat/2023/2	
+PASS	bias_corrections/opponent_beta/bat/2024/0	
+PASS	bias_corrections/opponent_beta/bat/2024/1	
+PASS	bias_corrections/opponent_beta/bat/2024/2	
+PASS	bias_corrections/opponent_beta/bat/2025/0	
+PASS	bias_corrections/opponent_beta/bat/2025/1	
+PASS	bias_corrections/opponent_beta/bat/2025/2	
+PASS	bias_corrections/opponent_beta/bat/2026/0	
+PASS	bias_corrections/opponent_beta/bat/2026/1	
+PASS	bias_corrections/opponent_beta/bat/2026/2	
+PASS	bias_corrections/opponent_beta/bowl/2022/0	
+PASS	bias_corrections/opponent_beta/bowl/2022/1	
+PASS	bias_corrections/opponent_beta/bowl/2022/2	
+PASS	bias_corrections/opponent_beta/bowl/2023/0	
+PASS	bias_corrections/opponent_beta/bowl/2023/1	
+PASS	bias_corrections/opponent_beta/bowl/2023/2	
+PASS	bias_corrections/opponent_beta/bowl/2024/0	
+PASS	bias_corrections/opponent_beta/bowl/2024/1	
+PASS	bias_corrections/opponent_beta/bowl/2024/2	
+PASS	bias_corrections/opponent_beta/bowl/2025/0	
+PASS	bias_corrections/opponent_beta/bowl/2025/1	
+PASS	bias_corrections/opponent_beta/bowl/2025/2	
+PASS	bias_corrections/opponent_beta/bowl/2026/0	
+PASS	bias_corrections/opponent_beta/bowl/2026/1	
+PASS	bias_corrections/opponent_beta/bowl/2026/2	
+PASS	bias_corrections/tier_gamma_bat/2022	
+PASS	bias_corrections/tier_gamma_bat/2023	
+PASS	bias_corrections/tier_gamma_bat/2024	
+PASS	bias_corrections/tier_gamma_bat/2025	
+PASS	bias_corrections/tier_gamma_bat/2026	
+PASS	bias_corrections/tier_gamma_bowl/2022	
+PASS	bias_corrections/tier_gamma_bowl/2023	
+PASS	bias_corrections/tier_gamma_bowl/2024	
+PASS	bias_corrections/tier_gamma_bowl/2025	
+PASS	bias_corrections/tier_gamma_bowl/2026	
+PASS	chase_wp/final	
+PASS	chase_wp/n_balls	
+PASS	chase_wp/raw/auc_ties_excluded	
+PASS	chase_wp/raw/brier	
+PASS	chase_wp/raw/logloss	
+PASS	chase_wp/smooth_g/auc_ties_excluded	
+PASS	chase_wp/smooth_g/brier	
+PASS	chase_wp/smooth_g/logloss	
+PASS	data/datapack_2022plus_deliveries	
+PASS	data/datapack_matches	
+PASS	data/model_rows_phase1a/all_deliveries	
+PASS	data/model_rows_phase1a/excluded_conflict_17765	
+PASS	data/model_rows_phase1a/excluded_dls_affected	
+PASS	data/model_rows_phase1a/excluded_super_over	
+PASS	data/model_rows_phase1a/excluded_unknown_runs_estimated_byes	
+PASS	data/model_rows_phase1a/rows_used	
+PASS	data/null_balls/dls_affected	
+PASS	data/null_balls/no_result	
+PASS	data/valid_2022plus_balls_with_wpa	
+PASS	eligibility/bat/eligible	
+PASS	eligibility/bat/exposure_floor_high_pressure_balls	
+PASS	eligibility/bat/fail_exposure_floor	
+PASS	eligibility/bat/fail_matches_2025_26	
+PASS	eligibility/bat/fail_own_share	
+PASS	eligibility/bat/ranked	
+PASS	eligibility/bowl/eligible	
+PASS	eligibility/bowl/exposure_floor_high_pressure_balls	
+PASS	eligibility/bowl/fail_exposure_floor	
+PASS	eligibility/bowl/fail_matches_2025_26	
+PASS	eligibility/bowl/fail_own_share	
+PASS	eligibility/bowl/ranked	
+PASS	final_top10/bat/0/cautious_pts	
+PASS	final_top10/bat/0/pct_top10	
+PASS	final_top10/bat/0/player	
+PASS	final_top10/bat/0/rank	
+PASS	final_top10/bat/1/cautious_pts	
+PASS	final_top10/bat/1/pct_top10	
+PASS	final_top10/bat/1/player	
+PASS	final_top10/bat/1/rank	
+PASS	final_top10/bat/2/cautious_pts	
+PASS	final_top10/bat/2/pct_top10	
+PASS	final_top10/bat/2/player	
+PASS	final_top10/bat/2/rank	
+PASS	final_top10/bat/3/cautious_pts	
+PASS	final_top10/bat/3/pct_top10	
+PASS	final_top10/bat/3/player	
+PASS	final_top10/bat/3/rank	
+PASS	final_top10/bat/4/cautious_pts	
+PASS	final_top10/bat/4/pct_top10	
+PASS	final_top10/bat/4/player	
+PASS	final_top10/bat/4/rank	
+PASS	final_top10/bat/5/cautious_pts	
+PASS	final_top10/bat/5/pct_top10	
+PASS	final_top10/bat/5/player	
+PASS	final_top10/bat/5/rank	
+PASS	final_top10/bat/6/cautious_pts	
+PASS	final_top10/bat/6/pct_top10	
+PASS	final_top10/bat/6/player	
+PASS	final_top10/bat/6/rank	
+PASS	final_top10/bat/7/cautious_pts	
+PASS	final_top10/bat/7/pct_top10	
+PASS	final_top10/bat/7/player	
+PASS	final_top10/bat/7/rank	
+PASS	final_top10/bat/8/cautious_pts	
+PASS	final_top10/bat/8/pct_top10	
+PASS	final_top10/bat/8/player	
+PASS	final_top10/bat/8/rank	
+PASS	final_top10/bat/9/cautious_pts	
+PASS	final_top10/bat/9/pct_top10	
+PASS	final_top10/bat/9/player	
+PASS	final_top10/bat/9/rank	
+PASS	final_top10/bowl/0/cautious_pts	
+PASS	final_top10/bowl/0/pct_top10	
+PASS	final_top10/bowl/0/player	
+PASS	final_top10/bowl/0/rank	
+PASS	final_top10/bowl/1/cautious_pts	
+PASS	final_top10/bowl/1/pct_top10	
+PASS	final_top10/bowl/1/player	
+PASS	final_top10/bowl/1/rank	
+PASS	final_top10/bowl/2/cautious_pts	
+PASS	final_top10/bowl/2/pct_top10	
+PASS	final_top10/bowl/2/player	
+PASS	final_top10/bowl/2/rank	
+PASS	final_top10/bowl/3/cautious_pts	
+PASS	final_top10/bowl/3/pct_top10	
+PASS	final_top10/bowl/3/player	
+PASS	final_top10/bowl/3/rank	
+PASS	final_top10/bowl/4/cautious_pts	
+PASS	final_top10/bowl/4/pct_top10	
+PASS	final_top10/bowl/4/player	
+PASS	final_top10/bowl/4/rank	
+PASS	final_top10/bowl/5/cautious_pts	
+PASS	final_top10/bowl/5/pct_top10	
+PASS	final_top10/bowl/5/player	
+PASS	final_top10/bowl/5/rank	
+PASS	final_top10/bowl/6/cautious_pts	
+PASS	final_top10/bowl/6/pct_top10	
+PASS	final_top10/bowl/6/player	
+PASS	final_top10/bowl/6/rank	
+PASS	final_top10/bowl/7/cautious_pts	
+PASS	final_top10/bowl/7/pct_top10	
+PASS	final_top10/bowl/7/player	
+PASS	final_top10/bowl/7/rank	
+PASS	final_top10/bowl/8/cautious_pts	
+PASS	final_top10/bowl/8/pct_top10	
+PASS	final_top10/bowl/8/player	
+PASS	final_top10/bowl/8/rank	
+PASS	final_top10/bowl/9/cautious_pts	
+PASS	final_top10/bowl/9/pct_top10	
+PASS	final_top10/bowl/9/player	
+PASS	final_top10/bowl/9/rank	
+PASS	first_innings_wp/logistic_baseline/auc_ties_excluded	
+PASS	first_innings_wp/logistic_baseline/brier	
+PASS	first_innings_wp/logistic_baseline/logloss	
+PASS	first_innings_wp/n_balls	
+PASS	first_innings_wp/wp1/auc_ties_excluded	
+PASS	first_innings_wp/wp1/brier	
+PASS	first_innings_wp/wp1/logloss	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|istar/hi95	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|istar/lo95	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|istar/n	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|istar/spearman	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|strike_rate_or_neg_economy/hi95	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|strike_rate_or_neg_economy/lo95	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|strike_rate_or_neg_economy/n	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|strike_rate_or_neg_economy/spearman	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|team_win_pct/hi95	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|team_win_pct/lo95	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|team_win_pct/n	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|team_win_pct/spearman	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|total_wpa/hi95	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|total_wpa/lo95	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|total_wpa/n	
+PASS	forward_test_phase5/bat|2025-26 (i*) best estimate|total_wpa/spearman	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|istar/hi95	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|istar/lo95	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|istar/n	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|istar/spearman	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/hi95	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/lo95	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/n	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/spearman	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|team_win_pct/hi95	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|team_win_pct/lo95	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|team_win_pct/n	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|team_win_pct/spearman	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|total_wpa/hi95	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|total_wpa/lo95	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|total_wpa/n	
+PASS	forward_test_phase5/bat|2025-26 strict-set record (LI >= 1.5)|total_wpa/spearman	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|istar/hi95	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|istar/lo95	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|istar/n	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|istar/spearman	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|strike_rate_or_neg_economy/hi95	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|strike_rate_or_neg_economy/lo95	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|strike_rate_or_neg_economy/n	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|strike_rate_or_neg_economy/spearman	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|team_win_pct/hi95	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|team_win_pct/lo95	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|team_win_pct/n	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|team_win_pct/spearman	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|total_wpa/hi95	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|total_wpa/lo95	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|total_wpa/n	
+PASS	forward_test_phase5/bowl|2025-26 (i*) best estimate|total_wpa/spearman	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|istar/hi95	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|istar/lo95	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|istar/n	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|istar/spearman	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/hi95	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/lo95	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/n	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/spearman	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|team_win_pct/hi95	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|team_win_pct/lo95	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|team_win_pct/n	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|team_win_pct/spearman	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|total_wpa/hi95	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|total_wpa/lo95	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|total_wpa/n	
+PASS	forward_test_phase5/bowl|2025-26 strict-set record (LI >= 1.5)|total_wpa/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|istar/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|istar/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|istar/n	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|istar/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|strike_rate_or_neg_economy/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|strike_rate_or_neg_economy/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|strike_rate_or_neg_economy/n	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|strike_rate_or_neg_economy/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|team_win_pct/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|team_win_pct/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|team_win_pct/n	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|team_win_pct/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|total_wpa/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|total_wpa/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|total_wpa/n	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 (i*) best estimate|total_wpa/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|istar/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|istar/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|istar/n	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|istar/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/n	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|team_win_pct/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|team_win_pct/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|team_win_pct/n	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|team_win_pct/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|total_wpa/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|total_wpa/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|total_wpa/n	
+PASS	forward_test_phase5b_wider/bat|pool>=150|2025-26 strict-set record (LI >= 1.5)|total_wpa/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|istar/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|istar/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|istar/n	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|istar/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|strike_rate_or_neg_economy/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|strike_rate_or_neg_economy/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|strike_rate_or_neg_economy/n	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|strike_rate_or_neg_economy/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|team_win_pct/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|team_win_pct/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|team_win_pct/n	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|team_win_pct/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|total_wpa/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|total_wpa/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|total_wpa/n	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 (i*) best estimate|total_wpa/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|istar/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|istar/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|istar/n	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|istar/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/n	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|team_win_pct/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|team_win_pct/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|team_win_pct/n	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|team_win_pct/spearman	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|total_wpa/hi95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|total_wpa/lo95	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|total_wpa/n	
+PASS	forward_test_phase5b_wider/bat|pool>=300|2025-26 strict-set record (LI >= 1.5)|total_wpa/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|istar/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|istar/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|istar/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|istar/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|strike_rate_or_neg_economy/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|strike_rate_or_neg_economy/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|strike_rate_or_neg_economy/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|strike_rate_or_neg_economy/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|team_win_pct/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|team_win_pct/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|team_win_pct/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|team_win_pct/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|total_wpa/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|total_wpa/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|total_wpa/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 (i*) best estimate|total_wpa/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|istar/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|istar/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|istar/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|istar/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|team_win_pct/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|team_win_pct/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|team_win_pct/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|team_win_pct/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|total_wpa/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|total_wpa/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|total_wpa/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=150|2025-26 strict-set record (LI >= 1.5)|total_wpa/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|istar/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|istar/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|istar/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|istar/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|strike_rate_or_neg_economy/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|strike_rate_or_neg_economy/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|strike_rate_or_neg_economy/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|strike_rate_or_neg_economy/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|team_win_pct/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|team_win_pct/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|team_win_pct/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|team_win_pct/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|total_wpa/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|total_wpa/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|total_wpa/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 (i*) best estimate|total_wpa/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|istar/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|istar/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|istar/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|istar/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|strike_rate_or_neg_economy/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|team_win_pct/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|team_win_pct/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|team_win_pct/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|team_win_pct/spearman	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|total_wpa/hi95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|total_wpa/lo95	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|total_wpa/n	
+PASS	forward_test_phase5b_wider/bowl|pool>=300|2025-26 strict-set record (LI >= 1.5)|total_wpa/spearman	
+PASS	outcome_model/final_outcome_model	
+PASS	outcome_model/phase1a_chosen	
+PASS	outcome_model/phase1a_fix_B2_minus_B/0	
+PASS	outcome_model/phase1a_fix_B2_minus_B/1	
+PASS	outcome_model/phase1a_fix_B2_minus_B/2	
+PASS	outcome_model/phase1a_fix_Brecal_minus_B/0	
+PASS	outcome_model/phase1a_fix_Brecal_minus_B/1	
+PASS	outcome_model/phase1a_fix_Brecal_minus_B/2	
+PASS	outcome_model/pooled_logloss_B_minus_A/0	
+PASS	outcome_model/pooled_logloss_B_minus_A/1	
+PASS	outcome_model/pooled_logloss_B_minus_A/2	
+PASS	per_ball_checks/li_raw_mean	
+PASS	per_ball_checks/max_abs_sum_wpa_minus_end_start	
+PASS	phase5c/bat/availability/coef_low_prev	
+PASS	phase5c/bat/availability/coef_rating	
+PASS	phase5c/bat/availability/hi95	
+PASS	phase5c/bat/availability/lo95	
+PASS	phase5c/bat/availability/n_low_prev	
+PASS	phase5c/bat/availability/n_obs	
+PASS	phase5c/bat/availability/n_players	
+PASS	phase5c/bat/availability/p	
+PASS	phase5c/bat/k	
+PASS	phase5c/bat/recency_best_h	
+PASS	phase5c/bat/recency_by_season/0/h	
+PASS	phase5c/bat/recency_by_season/0/hi95	
+PASS	phase5c/bat/recency_by_season/0/lo95	
+PASS	phase5c/bat/recency_by_season/0/players	
+PASS	phase5c/bat/recency_by_season/0/season T	
+PASS	phase5c/bat/recency_by_season/0/spearman	
+PASS	phase5c/bat/recency_by_season/1/h	
+PASS	phase5c/bat/recency_by_season/1/hi95	
+PASS	phase5c/bat/recency_by_season/1/lo95	
+PASS	phase5c/bat/recency_by_season/1/players	
+PASS	phase5c/bat/recency_by_season/1/season T	
+PASS	phase5c/bat/recency_by_season/1/spearman	
+PASS	phase5c/bat/recency_by_season/10/h	
+PASS	phase5c/bat/recency_by_season/10/hi95	
+PASS	phase5c/bat/recency_by_season/10/lo95	
+PASS	phase5c/bat/recency_by_season/10/players	
+PASS	phase5c/bat/recency_by_season/10/season T	
+PASS	phase5c/bat/recency_by_season/10/spearman	
+PASS	phase5c/bat/recency_by_season/11/h	
+PASS	phase5c/bat/recency_by_season/11/hi95	
+PASS	phase5c/bat/recency_by_season/11/lo95	
+PASS	phase5c/bat/recency_by_season/11/players	
+PASS	phase5c/bat/recency_by_season/11/season T	
+PASS	phase5c/bat/recency_by_season/11/spearman	
+PASS	phase5c/bat/recency_by_season/12/h	
+PASS	phase5c/bat/recency_by_season/12/hi95	
+PASS	phase5c/bat/recency_by_season/12/lo95	
+PASS	phase5c/bat/recency_by_season/12/players	
+PASS	phase5c/bat/recency_by_season/12/season T	
+PASS	phase5c/bat/recency_by_season/12/spearman	
+PASS	phase5c/bat/recency_by_season/13/h	
+PASS	phase5c/bat/recency_by_season/13/hi95	
+PASS	phase5c/bat/recency_by_season/13/lo95	
+PASS	phase5c/bat/recency_by_season/13/players	
+PASS	phase5c/bat/recency_by_season/13/season T	
+PASS	phase5c/bat/recency_by_season/13/spearman	
+PASS	phase5c/bat/recency_by_season/14/h	
+PASS	phase5c/bat/recency_by_season/14/hi95	
+PASS	phase5c/bat/recency_by_season/14/lo95	
+PASS	phase5c/bat/recency_by_season/14/players	
+PASS	phase5c/bat/recency_by_season/14/season T	
+PASS	phase5c/bat/recency_by_season/14/spearman	
+PASS	phase5c/bat/recency_by_season/2/h	
+PASS	phase5c/bat/recency_by_season/2/hi95	
+PASS	phase5c/bat/recency_by_season/2/lo95	
+PASS	phase5c/bat/recency_by_season/2/players	
+PASS	phase5c/bat/recency_by_season/2/season T	
+PASS	phase5c/bat/recency_by_season/2/spearman	
+PASS	phase5c/bat/recency_by_season/3/h	
+PASS	phase5c/bat/recency_by_season/3/hi95	
+PASS	phase5c/bat/recency_by_season/3/lo95	
+PASS	phase5c/bat/recency_by_season/3/players	
+PASS	phase5c/bat/recency_by_season/3/season T	
+PASS	phase5c/bat/recency_by_season/3/spearman	
+PASS	phase5c/bat/recency_by_season/4/h	
+PASS	phase5c/bat/recency_by_season/4/hi95	
+PASS	phase5c/bat/recency_by_season/4/lo95	
+PASS	phase5c/bat/recency_by_season/4/players	
+PASS	phase5c/bat/recency_by_season/4/season T	
+PASS	phase5c/bat/recency_by_season/4/spearman	
+PASS	phase5c/bat/recency_by_season/5/h	
+PASS	phase5c/bat/recency_by_season/5/hi95	
+PASS	phase5c/bat/recency_by_season/5/lo95	
+PASS	phase5c/bat/recency_by_season/5/players	
+PASS	phase5c/bat/recency_by_season/5/season T	
+PASS	phase5c/bat/recency_by_season/5/spearman	
+PASS	phase5c/bat/recency_by_season/6/h	
+PASS	phase5c/bat/recency_by_season/6/hi95	
+PASS	phase5c/bat/recency_by_season/6/lo95	
+PASS	phase5c/bat/recency_by_season/6/players	
+PASS	phase5c/bat/recency_by_season/6/season T	
+PASS	phase5c/bat/recency_by_season/6/spearman	
+PASS	phase5c/bat/recency_by_season/7/h	
+PASS	phase5c/bat/recency_by_season/7/hi95	
+PASS	phase5c/bat/recency_by_season/7/lo95	
+PASS	phase5c/bat/recency_by_season/7/players	
+PASS	phase5c/bat/recency_by_season/7/season T	
+PASS	phase5c/bat/recency_by_season/7/spearman	
+PASS	phase5c/bat/recency_by_season/8/h	
+PASS	phase5c/bat/recency_by_season/8/hi95	
+PASS	phase5c/bat/recency_by_season/8/lo95	
+PASS	phase5c/bat/recency_by_season/8/players	
+PASS	phase5c/bat/recency_by_season/8/season T	
+PASS	phase5c/bat/recency_by_season/8/spearman	
+PASS	phase5c/bat/recency_by_season/9/h	
+PASS	phase5c/bat/recency_by_season/9/hi95	
+PASS	phase5c/bat/recency_by_season/9/lo95	
+PASS	phase5c/bat/recency_by_season/9/players	
+PASS	phase5c/bat/recency_by_season/9/season T	
+PASS	phase5c/bat/recency_by_season/9/spearman	
+PASS	phase5c/bat/recency_pooled/0/diff hi95	
+PASS	phase5c/bat/recency_pooled/0/diff lo95	
+PASS	phase5c/bat/recency_pooled/0/h	
+PASS	phase5c/bat/recency_pooled/0/hi95	
+PASS	phase5c/bat/recency_pooled/0/lo95	
+PASS	phase5c/bat/recency_pooled/0/mean spearman (3 seasons)	
+PASS	phase5c/bat/recency_pooled/0/minus equal	
+PASS	phase5c/bat/recency_pooled/1/diff hi95	
+PASS	phase5c/bat/recency_pooled/1/diff lo95	
+PASS	phase5c/bat/recency_pooled/1/h	
+PASS	phase5c/bat/recency_pooled/1/hi95	
+PASS	phase5c/bat/recency_pooled/1/lo95	
+PASS	phase5c/bat/recency_pooled/1/mean spearman (3 seasons)	
+PASS	phase5c/bat/recency_pooled/1/minus equal	
+PASS	phase5c/bat/recency_pooled/2/diff hi95	
+PASS	phase5c/bat/recency_pooled/2/diff lo95	
+PASS	phase5c/bat/recency_pooled/2/h	
+PASS	phase5c/bat/recency_pooled/2/hi95	
+PASS	phase5c/bat/recency_pooled/2/lo95	
+PASS	phase5c/bat/recency_pooled/2/mean spearman (3 seasons)	
+PASS	phase5c/bat/recency_pooled/2/minus equal	
+PASS	phase5c/bat/recency_pooled/3/diff hi95	
+PASS	phase5c/bat/recency_pooled/3/diff lo95	
+PASS	phase5c/bat/recency_pooled/3/h	
+PASS	phase5c/bat/recency_pooled/3/hi95	
+PASS	phase5c/bat/recency_pooled/3/lo95	
+PASS	phase5c/bat/recency_pooled/3/mean spearman (3 seasons)	
+PASS	phase5c/bat/recency_pooled/3/minus equal	
+PASS	phase5c/bat/recency_pooled/4/diff hi95	
+PASS	phase5c/bat/recency_pooled/4/diff lo95	
+PASS	phase5c/bat/recency_pooled/4/h	
+PASS	phase5c/bat/recency_pooled/4/hi95	
+PASS	phase5c/bat/recency_pooled/4/lo95	
+PASS	phase5c/bat/recency_pooled/4/mean spearman (3 seasons)	
+PASS	phase5c/bat/recency_pooled/4/minus equal	
+PASS	phase5c/bat/strike_rate_vs_istar/0/(i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/0/(i*) hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/0/(i*) lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/0/SR - (i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/0/SR hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/0/SR lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/0/diff hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/0/diff lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/0/players	
+PASS	phase5c/bat/strike_rate_vs_istar/0/strike rate	
+PASS	phase5c/bat/strike_rate_vs_istar/0/target	
+PASS	phase5c/bat/strike_rate_vs_istar/0/test	
+PASS	phase5c/bat/strike_rate_vs_istar/1/(i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/1/(i*) hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/1/(i*) lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/1/SR - (i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/1/SR hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/1/SR lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/1/diff hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/1/diff lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/1/players	
+PASS	phase5c/bat/strike_rate_vs_istar/1/strike rate	
+PASS	phase5c/bat/strike_rate_vs_istar/1/target	
+PASS	phase5c/bat/strike_rate_vs_istar/1/test	
+PASS	phase5c/bat/strike_rate_vs_istar/2/(i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/2/(i*) hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/2/(i*) lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/2/SR - (i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/2/SR hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/2/SR lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/2/diff hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/2/diff lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/2/players	
+PASS	phase5c/bat/strike_rate_vs_istar/2/strike rate	
+PASS	phase5c/bat/strike_rate_vs_istar/2/target	
+PASS	phase5c/bat/strike_rate_vs_istar/2/test	
+PASS	phase5c/bat/strike_rate_vs_istar/3/(i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/3/(i*) hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/3/(i*) lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/3/SR - (i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/3/SR hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/3/SR lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/3/diff hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/3/diff lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/3/players	
+PASS	phase5c/bat/strike_rate_vs_istar/3/strike rate	
+PASS	phase5c/bat/strike_rate_vs_istar/3/target	
+PASS	phase5c/bat/strike_rate_vs_istar/3/test	
+PASS	phase5c/bat/strike_rate_vs_istar/4/(i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/4/(i*) hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/4/(i*) lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/4/SR - (i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/4/SR hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/4/SR lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/4/diff hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/4/diff lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/4/players	
+PASS	phase5c/bat/strike_rate_vs_istar/4/strike rate	
+PASS	phase5c/bat/strike_rate_vs_istar/4/target	
+PASS	phase5c/bat/strike_rate_vs_istar/4/test	
+PASS	phase5c/bat/strike_rate_vs_istar/5/(i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/5/(i*) hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/5/(i*) lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/5/SR - (i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/5/SR hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/5/SR lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/5/diff hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/5/diff lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/5/players	
+PASS	phase5c/bat/strike_rate_vs_istar/5/strike rate	
+PASS	phase5c/bat/strike_rate_vs_istar/5/target	
+PASS	phase5c/bat/strike_rate_vs_istar/5/test	
+PASS	phase5c/bat/strike_rate_vs_istar/6/(i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/6/(i*) hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/6/(i*) lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/6/SR - (i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/6/SR hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/6/SR lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/6/diff hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/6/diff lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/6/players	
+PASS	phase5c/bat/strike_rate_vs_istar/6/strike rate	
+PASS	phase5c/bat/strike_rate_vs_istar/6/target	
+PASS	phase5c/bat/strike_rate_vs_istar/6/test	
+PASS	phase5c/bat/strike_rate_vs_istar/7/(i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/7/(i*) hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/7/(i*) lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/7/SR - (i*)	
+PASS	phase5c/bat/strike_rate_vs_istar/7/SR hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/7/SR lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/7/diff hi95	
+PASS	phase5c/bat/strike_rate_vs_istar/7/diff lo95	
+PASS	phase5c/bat/strike_rate_vs_istar/7/players	
+PASS	phase5c/bat/strike_rate_vs_istar/7/strike rate	
+PASS	phase5c/bat/strike_rate_vs_istar/7/target	
+PASS	phase5c/bat/strike_rate_vs_istar/7/test	
+PASS	phase5c/bowl/availability/coef_low_prev	
+PASS	phase5c/bowl/availability/coef_rating	
+PASS	phase5c/bowl/availability/hi95	
+PASS	phase5c/bowl/availability/lo95	
+PASS	phase5c/bowl/availability/n_low_prev	
+PASS	phase5c/bowl/availability/n_obs	
+PASS	phase5c/bowl/availability/n_players	
+PASS	phase5c/bowl/availability/p	
+PASS	phase5c/bowl/k	
+PASS	phase5c/bowl/recency_best_h	
+PASS	phase5c/bowl/recency_by_season/0/h	
+PASS	phase5c/bowl/recency_by_season/0/hi95	
+PASS	phase5c/bowl/recency_by_season/0/lo95	
+PASS	phase5c/bowl/recency_by_season/0/players	
+PASS	phase5c/bowl/recency_by_season/0/season T	
+PASS	phase5c/bowl/recency_by_season/0/spearman	
+PASS	phase5c/bowl/recency_by_season/1/h	
+PASS	phase5c/bowl/recency_by_season/1/hi95	
+PASS	phase5c/bowl/recency_by_season/1/lo95	
+PASS	phase5c/bowl/recency_by_season/1/players	
+PASS	phase5c/bowl/recency_by_season/1/season T	
+PASS	phase5c/bowl/recency_by_season/1/spearman	
+PASS	phase5c/bowl/recency_by_season/10/h	
+PASS	phase5c/bowl/recency_by_season/10/hi95	
+PASS	phase5c/bowl/recency_by_season/10/lo95	
+PASS	phase5c/bowl/recency_by_season/10/players	
+PASS	phase5c/bowl/recency_by_season/10/season T	
+PASS	phase5c/bowl/recency_by_season/10/spearman	
+PASS	phase5c/bowl/recency_by_season/11/h	
+PASS	phase5c/bowl/recency_by_season/11/hi95	
+PASS	phase5c/bowl/recency_by_season/11/lo95	
+PASS	phase5c/bowl/recency_by_season/11/players	
+PASS	phase5c/bowl/recency_by_season/11/season T	
+PASS	phase5c/bowl/recency_by_season/11/spearman	
+PASS	phase5c/bowl/recency_by_season/12/h	
+PASS	phase5c/bowl/recency_by_season/12/hi95	
+PASS	phase5c/bowl/recency_by_season/12/lo95	
+PASS	phase5c/bowl/recency_by_season/12/players	
+PASS	phase5c/bowl/recency_by_season/12/season T	
+PASS	phase5c/bowl/recency_by_season/12/spearman	
+PASS	phase5c/bowl/recency_by_season/13/h	
+PASS	phase5c/bowl/recency_by_season/13/hi95	
+PASS	phase5c/bowl/recency_by_season/13/lo95	
+PASS	phase5c/bowl/recency_by_season/13/players	
+PASS	phase5c/bowl/recency_by_season/13/season T	
+PASS	phase5c/bowl/recency_by_season/13/spearman	
+PASS	phase5c/bowl/recency_by_season/14/h	
+PASS	phase5c/bowl/recency_by_season/14/hi95	
+PASS	phase5c/bowl/recency_by_season/14/lo95	
+PASS	phase5c/bowl/recency_by_season/14/players	
+PASS	phase5c/bowl/recency_by_season/14/season T	
+PASS	phase5c/bowl/recency_by_season/14/spearman	
+PASS	phase5c/bowl/recency_by_season/2/h	
+PASS	phase5c/bowl/recency_by_season/2/hi95	
+PASS	phase5c/bowl/recency_by_season/2/lo95	
+PASS	phase5c/bowl/recency_by_season/2/players	
+PASS	phase5c/bowl/recency_by_season/2/season T	
+PASS	phase5c/bowl/recency_by_season/2/spearman	
+PASS	phase5c/bowl/recency_by_season/3/h	
+PASS	phase5c/bowl/recency_by_season/3/hi95	
+PASS	phase5c/bowl/recency_by_season/3/lo95	
+PASS	phase5c/bowl/recency_by_season/3/players	
+PASS	phase5c/bowl/recency_by_season/3/season T	
+PASS	phase5c/bowl/recency_by_season/3/spearman	
+PASS	phase5c/bowl/recency_by_season/4/h	
+PASS	phase5c/bowl/recency_by_season/4/hi95	
+PASS	phase5c/bowl/recency_by_season/4/lo95	
+PASS	phase5c/bowl/recency_by_season/4/players	
+PASS	phase5c/bowl/recency_by_season/4/season T	
+PASS	phase5c/bowl/recency_by_season/4/spearman	
+PASS	phase5c/bowl/recency_by_season/5/h	
+PASS	phase5c/bowl/recency_by_season/5/hi95	
+PASS	phase5c/bowl/recency_by_season/5/lo95	
+PASS	phase5c/bowl/recency_by_season/5/players	
+PASS	phase5c/bowl/recency_by_season/5/season T	
+PASS	phase5c/bowl/recency_by_season/5/spearman	
+PASS	phase5c/bowl/recency_by_season/6/h	
+PASS	phase5c/bowl/recency_by_season/6/hi95	
+PASS	phase5c/bowl/recency_by_season/6/lo95	
+PASS	phase5c/bowl/recency_by_season/6/players	
+PASS	phase5c/bowl/recency_by_season/6/season T	
+PASS	phase5c/bowl/recency_by_season/6/spearman	
+PASS	phase5c/bowl/recency_by_season/7/h	
+PASS	phase5c/bowl/recency_by_season/7/hi95	
+PASS	phase5c/bowl/recency_by_season/7/lo95	
+PASS	phase5c/bowl/recency_by_season/7/players	
+PASS	phase5c/bowl/recency_by_season/7/season T	
+PASS	phase5c/bowl/recency_by_season/7/spearman	
+PASS	phase5c/bowl/recency_by_season/8/h	
+PASS	phase5c/bowl/recency_by_season/8/hi95	
+PASS	phase5c/bowl/recency_by_season/8/lo95	
+PASS	phase5c/bowl/recency_by_season/8/players	
+PASS	phase5c/bowl/recency_by_season/8/season T	
+PASS	phase5c/bowl/recency_by_season/8/spearman	
+PASS	phase5c/bowl/recency_by_season/9/h	
+PASS	phase5c/bowl/recency_by_season/9/hi95	
+PASS	phase5c/bowl/recency_by_season/9/lo95	
+PASS	phase5c/bowl/recency_by_season/9/players	
+PASS	phase5c/bowl/recency_by_season/9/season T	
+PASS	phase5c/bowl/recency_by_season/9/spearman	
+PASS	phase5c/bowl/recency_pooled/0/diff hi95	
+PASS	phase5c/bowl/recency_pooled/0/diff lo95	
+PASS	phase5c/bowl/recency_pooled/0/h	
+PASS	phase5c/bowl/recency_pooled/0/hi95	
+PASS	phase5c/bowl/recency_pooled/0/lo95	
+PASS	phase5c/bowl/recency_pooled/0/mean spearman (3 seasons)	
+PASS	phase5c/bowl/recency_pooled/0/minus equal	
+PASS	phase5c/bowl/recency_pooled/1/diff hi95	
+PASS	phase5c/bowl/recency_pooled/1/diff lo95	
+PASS	phase5c/bowl/recency_pooled/1/h	
+PASS	phase5c/bowl/recency_pooled/1/hi95	
+PASS	phase5c/bowl/recency_pooled/1/lo95	
+PASS	phase5c/bowl/recency_pooled/1/mean spearman (3 seasons)	
+PASS	phase5c/bowl/recency_pooled/1/minus equal	
+PASS	phase5c/bowl/recency_pooled/2/diff hi95	
+PASS	phase5c/bowl/recency_pooled/2/diff lo95	
+PASS	phase5c/bowl/recency_pooled/2/h	
+PASS	phase5c/bowl/recency_pooled/2/hi95	
+PASS	phase5c/bowl/recency_pooled/2/lo95	
+PASS	phase5c/bowl/recency_pooled/2/mean spearman (3 seasons)	
+PASS	phase5c/bowl/recency_pooled/2/minus equal	
+PASS	phase5c/bowl/recency_pooled/3/diff hi95	
+PASS	phase5c/bowl/recency_pooled/3/diff lo95	
+PASS	phase5c/bowl/recency_pooled/3/h	
+PASS	phase5c/bowl/recency_pooled/3/hi95	
+PASS	phase5c/bowl/recency_pooled/3/lo95	
+PASS	phase5c/bowl/recency_pooled/3/mean spearman (3 seasons)	
+PASS	phase5c/bowl/recency_pooled/3/minus equal	
+PASS	phase5c/bowl/recency_pooled/4/diff hi95	
+PASS	phase5c/bowl/recency_pooled/4/diff lo95	
+PASS	phase5c/bowl/recency_pooled/4/h	
+PASS	phase5c/bowl/recency_pooled/4/hi95	
+PASS	phase5c/bowl/recency_pooled/4/lo95	
+PASS	phase5c/bowl/recency_pooled/4/mean spearman (3 seasons)	
+PASS	phase5c/bowl/recency_pooled/4/minus equal	
+PASS	pressure/composition/LI>=1.0/inn1_Death_LI_share	
+PASS	pressure/composition/LI>=1.0/inn1_Middle_LI_share	
+PASS	pressure/composition/LI>=1.0/inn1_Powerplay_LI_share	
+PASS	pressure/composition/LI>=1.0/inn2_Death_LI_share	
+PASS	pressure/composition/LI>=1.0/inn2_Middle_LI_share	
+PASS	pressure/composition/LI>=1.0/inn2_Powerplay_LI_share	
+PASS	pressure/composition/LI>=1.0/share_of_all_balls	
+PASS	pressure/composition/LI>=1.5/inn1_Death_LI_share	
+PASS	pressure/composition/LI>=1.5/inn1_Middle_LI_share	
+PASS	pressure/composition/LI>=1.5/inn1_Powerplay_LI_share	
+PASS	pressure/composition/LI>=1.5/inn2_Death_LI_share	
+PASS	pressure/composition/LI>=1.5/inn2_Middle_LI_share	
+PASS	pressure/composition/LI>=1.5/inn2_Powerplay_LI_share	
+PASS	pressure/composition/LI>=1.5/share_of_all_balls	
+PASS	pressure/composition/LI>=2.0/inn1_Death_LI_share	
+PASS	pressure/composition/LI>=2.0/inn1_Middle_LI_share	
+PASS	pressure/composition/LI>=2.0/inn1_Powerplay_LI_share	
+PASS	pressure/composition/LI>=2.0/inn2_Death_LI_share	
+PASS	pressure/composition/LI>=2.0/inn2_Middle_LI_share	
+PASS	pressure/composition/LI>=2.0/inn2_Powerplay_LI_share	
+PASS	pressure/composition/LI>=2.0/share_of_all_balls	
+PASS	pressure/li_p80	
+PASS	pressure/li_p90	
+PASS	pressure_gap/definition	
+PASS	pressure_gap/repeatability/bat/gap/hi95	
+PASS	pressure_gap/repeatability/bat/gap/lo95	
+PASS	pressure_gap/repeatability/bat/gap/rho	
+PASS	pressure_gap/repeatability/bat/normal/hi95	
+PASS	pressure_gap/repeatability/bat/normal/lo95	
+PASS	pressure_gap/repeatability/bat/normal/rho	
+PASS	pressure_gap/repeatability/bat/players	
+PASS	pressure_gap/repeatability/bat/pressure/hi95	
+PASS	pressure_gap/repeatability/bat/pressure/lo95	
+PASS	pressure_gap/repeatability/bat/pressure/rho	
+PASS	pressure_gap/repeatability/bat/top20_expected_by_chance	
+PASS	pressure_gap/repeatability/bat/top20_ranges_excluding_0	
+PASS	pressure_gap/repeatability/bowl/gap/hi95	
+PASS	pressure_gap/repeatability/bowl/gap/lo95	
+PASS	pressure_gap/repeatability/bowl/gap/rho	
+PASS	pressure_gap/repeatability/bowl/normal/hi95	
+PASS	pressure_gap/repeatability/bowl/normal/lo95	
+PASS	pressure_gap/repeatability/bowl/normal/rho	
+PASS	pressure_gap/repeatability/bowl/players	
+PASS	pressure_gap/repeatability/bowl/pressure/hi95	
+PASS	pressure_gap/repeatability/bowl/pressure/lo95	
+PASS	pressure_gap/repeatability/bowl/pressure/rho	
+PASS	pressure_gap/repeatability/bowl/top20_expected_by_chance	
+PASS	pressure_gap/repeatability/bowl/top20_ranges_excluding_0	
+PASS	pressure_gap/top10/bat/0/gap	
+PASS	pressure_gap/top10/bat/0/hi80	
+PASS	pressure_gap/top10/bat/0/lo80	
+PASS	pressure_gap/top10/bat/0/normal	
+PASS	pressure_gap/top10/bat/0/player	
+PASS	pressure_gap/top10/bat/0/pressure	
+PASS	pressure_gap/top10/bat/0/pressure_balls	
+PASS	pressure_gap/top10/bat/0/rank	
+PASS	pressure_gap/top10/bat/1/gap	
+PASS	pressure_gap/top10/bat/1/hi80	
+PASS	pressure_gap/top10/bat/1/lo80	
+PASS	pressure_gap/top10/bat/1/normal	
+PASS	pressure_gap/top10/bat/1/player	
+PASS	pressure_gap/top10/bat/1/pressure	
+PASS	pressure_gap/top10/bat/1/pressure_balls	
+PASS	pressure_gap/top10/bat/1/rank	
+PASS	pressure_gap/top10/bat/2/gap	
+PASS	pressure_gap/top10/bat/2/hi80	
+PASS	pressure_gap/top10/bat/2/lo80	
+PASS	pressure_gap/top10/bat/2/normal	
+PASS	pressure_gap/top10/bat/2/player	
+PASS	pressure_gap/top10/bat/2/pressure	
+PASS	pressure_gap/top10/bat/2/pressure_balls	
+PASS	pressure_gap/top10/bat/2/rank	
+PASS	pressure_gap/top10/bat/3/gap	
+PASS	pressure_gap/top10/bat/3/hi80	
+PASS	pressure_gap/top10/bat/3/lo80	
+PASS	pressure_gap/top10/bat/3/normal	
+PASS	pressure_gap/top10/bat/3/player	
+PASS	pressure_gap/top10/bat/3/pressure	
+PASS	pressure_gap/top10/bat/3/pressure_balls	
+PASS	pressure_gap/top10/bat/3/rank	
+PASS	pressure_gap/top10/bat/4/gap	
+PASS	pressure_gap/top10/bat/4/hi80	
+PASS	pressure_gap/top10/bat/4/lo80	
+PASS	pressure_gap/top10/bat/4/normal	
+PASS	pressure_gap/top10/bat/4/player	
+PASS	pressure_gap/top10/bat/4/pressure	
+PASS	pressure_gap/top10/bat/4/pressure_balls	
+PASS	pressure_gap/top10/bat/4/rank	
+PASS	pressure_gap/top10/bat/5/gap	
+PASS	pressure_gap/top10/bat/5/hi80	
+PASS	pressure_gap/top10/bat/5/lo80	
+PASS	pressure_gap/top10/bat/5/normal	
+PASS	pressure_gap/top10/bat/5/player	
+PASS	pressure_gap/top10/bat/5/pressure	
+PASS	pressure_gap/top10/bat/5/pressure_balls	
+PASS	pressure_gap/top10/bat/5/rank	
+PASS	pressure_gap/top10/bat/6/gap	
+PASS	pressure_gap/top10/bat/6/hi80	
+PASS	pressure_gap/top10/bat/6/lo80	
+PASS	pressure_gap/top10/bat/6/normal	
+PASS	pressure_gap/top10/bat/6/player	
+PASS	pressure_gap/top10/bat/6/pressure	
+PASS	pressure_gap/top10/bat/6/pressure_balls	
+PASS	pressure_gap/top10/bat/6/rank	
+PASS	pressure_gap/top10/bat/7/gap	
+PASS	pressure_gap/top10/bat/7/hi80	
+PASS	pressure_gap/top10/bat/7/lo80	
+PASS	pressure_gap/top10/bat/7/normal	
+PASS	pressure_gap/top10/bat/7/player	
+PASS	pressure_gap/top10/bat/7/pressure	
+PASS	pressure_gap/top10/bat/7/pressure_balls	
+PASS	pressure_gap/top10/bat/7/rank	
+PASS	pressure_gap/top10/bat/8/gap	
+PASS	pressure_gap/top10/bat/8/hi80	
+PASS	pressure_gap/top10/bat/8/lo80	
+PASS	pressure_gap/top10/bat/8/normal	
+PASS	pressure_gap/top10/bat/8/player	
+PASS	pressure_gap/top10/bat/8/pressure	
+PASS	pressure_gap/top10/bat/8/pressure_balls	
+PASS	pressure_gap/top10/bat/8/rank	
+PASS	pressure_gap/top10/bat/9/gap	
+PASS	pressure_gap/top10/bat/9/hi80	
+PASS	pressure_gap/top10/bat/9/lo80	
+PASS	pressure_gap/top10/bat/9/normal	
+PASS	pressure_gap/top10/bat/9/player	
+PASS	pressure_gap/top10/bat/9/pressure	
+PASS	pressure_gap/top10/bat/9/pressure_balls	
+PASS	pressure_gap/top10/bat/9/rank	
+PASS	pressure_gap/top10/bowl/0/gap	
+PASS	pressure_gap/top10/bowl/0/hi80	
+PASS	pressure_gap/top10/bowl/0/lo80	
+PASS	pressure_gap/top10/bowl/0/normal	
+PASS	pressure_gap/top10/bowl/0/player	
+PASS	pressure_gap/top10/bowl/0/pressure	
+PASS	pressure_gap/top10/bowl/0/pressure_balls	
+PASS	pressure_gap/top10/bowl/0/rank	
+PASS	pressure_gap/top10/bowl/1/gap	
+PASS	pressure_gap/top10/bowl/1/hi80	
+PASS	pressure_gap/top10/bowl/1/lo80	
+PASS	pressure_gap/top10/bowl/1/normal	
+PASS	pressure_gap/top10/bowl/1/player	
+PASS	pressure_gap/top10/bowl/1/pressure	
+PASS	pressure_gap/top10/bowl/1/pressure_balls	
+PASS	pressure_gap/top10/bowl/1/rank	
+PASS	pressure_gap/top10/bowl/2/gap	
+PASS	pressure_gap/top10/bowl/2/hi80	
+PASS	pressure_gap/top10/bowl/2/lo80	
+PASS	pressure_gap/top10/bowl/2/normal	
+PASS	pressure_gap/top10/bowl/2/player	
+PASS	pressure_gap/top10/bowl/2/pressure	
+PASS	pressure_gap/top10/bowl/2/pressure_balls	
+PASS	pressure_gap/top10/bowl/2/rank	
+PASS	pressure_gap/top10/bowl/3/gap	
+PASS	pressure_gap/top10/bowl/3/hi80	
+PASS	pressure_gap/top10/bowl/3/lo80	
+PASS	pressure_gap/top10/bowl/3/normal	
+PASS	pressure_gap/top10/bowl/3/player	
+PASS	pressure_gap/top10/bowl/3/pressure	
+PASS	pressure_gap/top10/bowl/3/pressure_balls	
+PASS	pressure_gap/top10/bowl/3/rank	
+PASS	pressure_gap/top10/bowl/4/gap	
+PASS	pressure_gap/top10/bowl/4/hi80	
+PASS	pressure_gap/top10/bowl/4/lo80	
+PASS	pressure_gap/top10/bowl/4/normal	
+PASS	pressure_gap/top10/bowl/4/player	
+PASS	pressure_gap/top10/bowl/4/pressure	
+PASS	pressure_gap/top10/bowl/4/pressure_balls	
+PASS	pressure_gap/top10/bowl/4/rank	
+PASS	pressure_gap/top10/bowl/5/gap	
+PASS	pressure_gap/top10/bowl/5/hi80	
+PASS	pressure_gap/top10/bowl/5/lo80	
+PASS	pressure_gap/top10/bowl/5/normal	
+PASS	pressure_gap/top10/bowl/5/player	
+PASS	pressure_gap/top10/bowl/5/pressure	
+PASS	pressure_gap/top10/bowl/5/pressure_balls	
+PASS	pressure_gap/top10/bowl/5/rank	
+PASS	pressure_gap/top10/bowl/6/gap	
+PASS	pressure_gap/top10/bowl/6/hi80	
+PASS	pressure_gap/top10/bowl/6/lo80	
+PASS	pressure_gap/top10/bowl/6/normal	
+PASS	pressure_gap/top10/bowl/6/player	
+PASS	pressure_gap/top10/bowl/6/pressure	
+PASS	pressure_gap/top10/bowl/6/pressure_balls	
+PASS	pressure_gap/top10/bowl/6/rank	
+PASS	pressure_gap/top10/bowl/7/gap	
+PASS	pressure_gap/top10/bowl/7/hi80	
+PASS	pressure_gap/top10/bowl/7/lo80	
+PASS	pressure_gap/top10/bowl/7/normal	
+PASS	pressure_gap/top10/bowl/7/player	
+PASS	pressure_gap/top10/bowl/7/pressure	
+PASS	pressure_gap/top10/bowl/7/pressure_balls	
+PASS	pressure_gap/top10/bowl/7/rank	
+PASS	pressure_gap/top10/bowl/8/gap	
+PASS	pressure_gap/top10/bowl/8/hi80	
+PASS	pressure_gap/top10/bowl/8/lo80	
+PASS	pressure_gap/top10/bowl/8/normal	
+PASS	pressure_gap/top10/bowl/8/player	
+PASS	pressure_gap/top10/bowl/8/pressure	
+PASS	pressure_gap/top10/bowl/8/pressure_balls	
+PASS	pressure_gap/top10/bowl/8/rank	
+PASS	pressure_gap/top10/bowl/9/gap	
+PASS	pressure_gap/top10/bowl/9/hi80	
+PASS	pressure_gap/top10/bowl/9/lo80	
+PASS	pressure_gap/top10/bowl/9/normal	
+PASS	pressure_gap/top10/bowl/9/player	
+PASS	pressure_gap/top10/bowl/9/pressure	
+PASS	pressure_gap/top10/bowl/9/pressure_balls	
+PASS	pressure_gap/top10/bowl/9/rank	
+PASS	pressure_gap_forward_test/bat/confirmed	
+PASS	pressure_gap_forward_test/bat/eligible only, >= 20 each period/gap_coef_for_future_pressure/0	
+PASS	pressure_gap_forward_test/bat/eligible only, >= 20 each period/gap_coef_for_future_pressure/1	
+PASS	pressure_gap_forward_test/bat/eligible only, >= 20 each period/gap_coef_for_future_pressure/2	
+PASS	pressure_gap_forward_test/bat/eligible only, >= 20 each period/gap_rho/0	
+PASS	pressure_gap_forward_test/bat/eligible only, >= 20 each period/gap_rho/1	
+PASS	pressure_gap_forward_test/bat/eligible only, >= 20 each period/gap_rho/2	
+PASS	pressure_gap_forward_test/bat/eligible only, >= 20 each period/normal_coef	
+PASS	pressure_gap_forward_test/bat/eligible only, >= 20 each period/normal_rho/0	
+PASS	pressure_gap_forward_test/bat/eligible only, >= 20 each period/normal_rho/1	
+PASS	pressure_gap_forward_test/bat/eligible only, >= 20 each period/normal_rho/2	
+PASS	pressure_gap_forward_test/bat/eligible only, >= 20 each period/players	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 20 each period (main)/gap_coef_for_future_pressure/0	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 20 each period (main)/gap_coef_for_future_pressure/1	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 20 each period (main)/gap_coef_for_future_pressure/2	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 20 each period (main)/gap_rho/0	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 20 each period (main)/gap_rho/1	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 20 each period (main)/gap_rho/2	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 20 each period (main)/normal_coef	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 20 each period (main)/normal_rho/0	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 20 each period (main)/normal_rho/1	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 20 each period (main)/normal_rho/2	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 20 each period (main)/players	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 40 each period/gap_coef_for_future_pressure/0	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 40 each period/gap_coef_for_future_pressure/1	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 40 each period/gap_coef_for_future_pressure/2	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 40 each period/gap_rho/0	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 40 each period/gap_rho/1	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 40 each period/gap_rho/2	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 40 each period/normal_coef	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 40 each period/normal_rho/0	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 40 each period/normal_rho/1	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 40 each period/normal_rho/2	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 40 each period/players	
+PASS	pressure_gap_forward_test/bat/pressure balls >= 60 each period/players	
+PASS	pressure_gap_forward_test/bowl/confirmed	
+PASS	pressure_gap_forward_test/bowl/eligible only, >= 20 each period/gap_coef_for_future_pressure/0	
+PASS	pressure_gap_forward_test/bowl/eligible only, >= 20 each period/gap_coef_for_future_pressure/1	
+PASS	pressure_gap_forward_test/bowl/eligible only, >= 20 each period/gap_coef_for_future_pressure/2	
+PASS	pressure_gap_forward_test/bowl/eligible only, >= 20 each period/gap_rho/0	
+PASS	pressure_gap_forward_test/bowl/eligible only, >= 20 each period/gap_rho/1	
+PASS	pressure_gap_forward_test/bowl/eligible only, >= 20 each period/gap_rho/2	
+PASS	pressure_gap_forward_test/bowl/eligible only, >= 20 each period/normal_coef	
+PASS	pressure_gap_forward_test/bowl/eligible only, >= 20 each period/normal_rho/0	
+PASS	pressure_gap_forward_test/bowl/eligible only, >= 20 each period/normal_rho/1	
+PASS	pressure_gap_forward_test/bowl/eligible only, >= 20 each period/normal_rho/2	
+PASS	pressure_gap_forward_test/bowl/eligible only, >= 20 each period/players	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 20 each period (main)/gap_coef_for_future_pressure/0	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 20 each period (main)/gap_coef_for_future_pressure/1	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 20 each period (main)/gap_coef_for_future_pressure/2	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 20 each period (main)/gap_rho/0	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 20 each period (main)/gap_rho/1	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 20 each period (main)/gap_rho/2	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 20 each period (main)/normal_coef	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 20 each period (main)/normal_rho/0	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 20 each period (main)/normal_rho/1	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 20 each period (main)/normal_rho/2	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 20 each period (main)/players	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 40 each period/gap_coef_for_future_pressure/0	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 40 each period/gap_coef_for_future_pressure/1	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 40 each period/gap_coef_for_future_pressure/2	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 40 each period/gap_rho/0	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 40 each period/gap_rho/1	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 40 each period/gap_rho/2	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 40 each period/normal_coef	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 40 each period/normal_rho/0	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 40 each period/normal_rho/1	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 40 each period/normal_rho/2	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 40 each period/players	
+PASS	pressure_gap_forward_test/bowl/pressure balls >= 60 each period/players	
+PASS	rejected_runs/4d_bat_eligible_under_P1/0	
+PASS	rejected_runs/4d_bowl_strict_target_reliability/0	
+PASS	rejected_runs/availability_effect_user_reported_bowlers/0	
+PASS	rejected_runs/availability_effect_user_reported_bowlers/1	
+PASS	rejected_runs/availability_effect_user_reported_bowlers/2	
