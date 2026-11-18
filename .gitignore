@@ -55,6 +55,10 @@
 /superr/reports/final_v3/reference/*
 !/superr/reports/final_v3/reference/final_top10.csv
 !/superr/reports/final_v3/reference/key_numbers.json
+# the submission report (PDF only; its sources stay local)
+!/superr/reports/book/
+/superr/reports/book/*
+!/superr/reports/book/SupeRR_Pressure_Report_Abhinav_Anand.pdf
 # v1 top 10 (read for the v1 -> v2 changes), the forward test, and the floor sensitivity table: single machine-output files
 !/superr/reports/final/
 /superr/reports/final/*
