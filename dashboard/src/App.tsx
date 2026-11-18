@@ -16,7 +16,7 @@ import type { Matchups, Sandbox, Specialists } from './sections/types';
 
 // Sections are added here phase by phase; the nav follows this list.
 const NAV: NavItem[] = [{ id: 'nineteenth', label: 'The 19th over' }, { id: 'picks', label: 'The picks' }, { id: 'dive', label: 'Deep dive' },
-  { id: 'h2h', label: 'Head-to-head' }, { id: 'specialists', label: 'Specialists' }, { id: 'rules', label: 'Change our rules' }, { id: 'how', label: 'How it works' }];
+  { id: 'h2h', label: 'Head-to-head' }, { id: 'specialists', label: 'Specialists' }, { id: 'rules', label: 'Rules' }, { id: 'how', label: 'How it works' }];
 const fromHash = () => { const m = /^#player-(\d+)$/.exec(window.location.hash); return m ? Number(m[1]) : null; };
 
 export default function App() {
