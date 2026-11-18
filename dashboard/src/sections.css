@@ -81,6 +81,7 @@
 @media (min-width: 900px) { .how { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1300px) { .how { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .how-item { display: grid; gap: 8px; align-content: start; }
+.how-wide { grid-column: 1 / -1; }
 .how-item h3 { font-size: 22px; }
 .how-item p, .how-item li { font-size: 14.5px; max-width: 56ch; }
 .how-item ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }

@@ -6,6 +6,9 @@
     python run_all.py --floor 50 [--clean]       # v2: exposure-floor eligibility (>= 50 balls with LI >= 1.5); reruns
                                                  # phase4f_final onward only (upstream frozen), outputs in *_v2 folders
     python run_all.py --floor 50 --verify-only   # compare reports/final_v2 with reports/final_v2/reference
+    python run_all.py --floor 50 --pressure-positive [--clean]   # v3: post-hoc rule on top of the floor-50 pool (pressure value > 0);
+                                                 # reads the frozen v2 outputs only, writes out/model_v3 and reports/final_v3
+    python run_all.py --floor 50 --pressure-positive --verify-only   # compare reports/final_v3 with reports/final_v3/reference
 
 Inputs: SupeRR_Data_Pack/ (data pack), data/cricsheet/{ipl,t20s}/ (Cricsheet JSON), superr/out/cache/ (Open-Meteo /
 GeoNames responses; fetch_context.py only calls the network for requests missing from the cache).
@@ -30,6 +33,7 @@ def variant_dirs(suffix):
             os.path.join(SUPERR, "reports", "phase4" + suffix), os.path.join(SUPERR, "reports", "phase5" + suffix),
             os.path.join(SUPERR, "dash" + suffix)]
 PY = sys.executable
+V3_STEP = ("phase9_pressure_positive", ["src/phase9_pressure_positive.py"])   # needs the frozen v2 outputs; nothing upstream is rerun
 
 STEPS = [
     ("parse_cricsheet", ["parse_cricsheet.py", CRICSHEET, "out/cricsheet_index.csv"]),
@@ -101,20 +105,24 @@ def main():
     args = sys.argv[1:]
     floor = int(args[args.index("--floor") + 1]) if "--floor" in args else 0
     env = {**os.environ, "PYTHONIOENCODING": "utf-8"}
+    pp = "--pressure-positive" in args
+    if pp and floor != 50:
+        sys.exit("--pressure-positive is defined on top of the floor-50 pool: use --floor 50 --pressure-positive")
     if floor:
-        suffix = os.environ.get("SUPERR_SUFFIX", "_v2")
+        suffix = "_v3" if pp else os.environ.get("SUPERR_SUFFIX", "_v2")
         assert suffix, "a floor run must not write to the v1 folders"
         env.update({"SUPERR_FLOOR": str(floor), "SUPERR_SUFFIX": suffix})
         FINAL = os.path.join(SUPERR, "reports", "final" + suffix); REF = os.path.join(FINAL, "reference")
     if "--verify-only" in args:
         sys.exit(1 if verify() else 0)
     start = 0
+    steps = [V3_STEP] if pp else STEPS
     if "--from" in args:
         name = args[args.index("--from") + 1]
         start = [s for s, _ in STEPS].index(name)
-    elif floor:
+    elif floor and not pp:
         start = [s for s, _ in STEPS].index(FLOOR_FIRST_STEP)
-    if floor and start < [s for s, _ in STEPS].index(FLOOR_FIRST_STEP):
+    if floor and not pp and start < [s for s, _ in STEPS].index(FLOOR_FIRST_STEP):
         sys.exit(f"--floor runs start at {FLOOR_FIRST_STEP} or later (upstream outputs are shared with v1)")
     if floor and "--clean" in args:
         for d in variant_dirs(env["SUPERR_SUFFIX"]):
@@ -132,7 +140,7 @@ def main():
             if os.path.exists(c):
                 os.remove(c)
     t_all = time.time()
-    for name, cmd in STEPS[start:]:
+    for name, cmd in steps[start:]:
         t = time.time()
         print(f"[{time.strftime('%H:%M:%S')}] {name} ...", flush=True)
         r = subprocess.run([PY] + cmd, cwd=SUPERR, env=env)

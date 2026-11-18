@@ -28,6 +28,8 @@ export function verdictStyle(role: Role, v: Verdict): { bg: string; fg: string; 
   return { bg: c, fg: '#ffffff', border: c };
 }
 
-export function verdictLabel(v: Verdict, range: string): string {
-  return v === 'no clear difference' ? v : `${v} in ${range}`;
+export function verdictLabel(v: Verdict, range: string, balls: number): string {
+  return v === 'no clear difference'
+    ? `no clear difference: too few pressure balls to tell (${balls.toLocaleString('en-IN')} balls)`
+    : `${v} in ${range}`;
 }

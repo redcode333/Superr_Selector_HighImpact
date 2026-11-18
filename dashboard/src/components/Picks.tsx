@@ -31,7 +31,7 @@ function RoleColumn({ role, data, meta, gapDomain, ratingMax, onOpen }: {
           </li>
         ))}
       </ol>
-      <h4 className="alt-head">Alternate</h4>
+      <h4 className="alt-head">{alts.length > 1 ? 'Alternates' : 'Alternate'}</h4>
       {alts.map((p) => (
         <PlayerCard key={p.player_id} p={p} role={role} field={R.field} gapDomain={gapDomain} ratingMax={ratingMax} dataRange={meta.data_range} onOpen={onOpen} />
       ))}
@@ -46,9 +46,9 @@ function HonestNote({ meta }: { meta: Meta }) {
       <h3>How to read the verdicts</h3>
       <p>{h.chance}</p>
       <ul>{h.lines.map((l) => <li key={l.role}>{l.clear}.</li>)}</ul>
-      <p>That is close to luck. And pressure gaps did not carry forward: the gap in 2022–24 does not predict the gap in 2025–26 for the floor-50 pool.</p>
+      <p>That is close to luck. And pressure gaps did not carry forward: the gap in 2022–24 does not predict the gap in 2025–26 (floor-50 players with at least 20 pressure balls in each period).</p>
       <ul className="honest-num">{h.lines.map((l) => <li key={l.role}>{l.forward}</li>)}</ul>
-      <p className="honest-end">So a verdict describes the past, not a promise.</p>
+      <p className="honest-end">So a verdict describes {meta.data_range}, not a forecast.</p>
     </aside>
   );
 }

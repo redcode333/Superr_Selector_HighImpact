@@ -9,7 +9,7 @@ export interface Specialists { rows: SpecRow[] }
 
 export interface SandboxTop { player_id: number; name: string; value: number; high_pressure_balls: number }
 export interface Sandbox {
-  own_share_pct: number[]; matches_2025_26: number[]; keys: ('cautious' | 'projected')[]; floors: number[];
-  ours: { own: number; m: number; key: 'cautious' | 'projected'; floor: number };
+  own_share_pct: number[]; matches_2025_26: number[]; keys: ('cautious' | 'projected')[]; floors: number[]; pressure_rule: number[];
+  ours: { own: number; m: number; key: 'cautious' | 'projected'; floor: number; pp: number };
   lists: Record<string, { eligible: number; top: SandboxTop[] }>;
 }

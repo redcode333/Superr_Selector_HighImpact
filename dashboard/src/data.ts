@@ -31,10 +31,18 @@ export interface Picks { unit: string; roles: Record<Role, RolePicks> }
 export interface ForwardRow { players: number; rho: number; lo95: number; hi95: number }
 export interface VerdictCounts { n: number; pct: number }
 export interface SensRole { eligible: number; top10: string[]; out: string[]; in: string[] }
+export interface PressureRuleInfo {
+  decided: string;
+  left: Record<Role, { name: string; v2_rank: number; pressure_value: number; high_pressure_balls: number }[]>;
+  entered: Record<Role, { name: string; v2_rank: number; v3_rank: number; pressure_value: number }[]>;
+  failed: Record<Role, number>; pool_before: Record<Role, number>; pool_after: Record<Role, number>;
+  lists: Record<Role, Record<'without_rule' | 'with_rule', { top10: string[]; alternates: string[] }>>;
+}
 export interface Meta {
   title: string; data_range: string; last_built: string; unit: string; rating_unit: string; floor: number; li_pressure: number;
-  rules: { own_share_min_pct: number; matches_2025_26_min: number; high_pressure_balls_min: number };
-  eligibility: Record<'bat' | 'bowl', { ranked: number; eligible: number; fail_own_share: number; fail_matches_2025_26: number }>;
+  rules: { own_share_min_pct: number; matches_2025_26_min: number; high_pressure_balls_min: number; pressure_value_above_average: boolean };
+  eligibility: Record<'bat' | 'bowl', { ranked: number; eligible: number; fail_own_share: number; fail_matches_2025_26: number;
+    eligible_floor50_before_pressure_rule: number; fail_pressure_rule: number }>;
   verification: { passed: number; total: number };
   forward_test: Record<Role, Record<string, ForwardRow>>;
   forward_confirmed: Record<Role, boolean>;
@@ -43,6 +51,7 @@ export interface Meta {
   changes: {
     swaps: Record<Role, { out: { name: string; v1_rank: number; high_pressure_balls: number }[]; in: { name: string; v2_rank: number; high_pressure_balls: number }[] }>;
     sensitivity: ({ floor: number } & Record<Role, SensRole>)[];
+    pressure_rule: PressureRuleInfo;
   };
   data_source: string;
   balls: { total: number; without_importance: number; without_importance_pct: number };

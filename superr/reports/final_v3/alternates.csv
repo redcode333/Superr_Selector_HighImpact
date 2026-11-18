@@ -1,0 +1,5 @@
+role,rank (eligible),player,cautious rating (pts),best estimate (pts),80% range low,80% range high,own-data %,% of re-rankings in top 10,median rank (re-rankings),matches,matches 2025-26,% strict-set LI powerplay,% middle,% death,% IPL,strict-set pressure record (pts),strict-set balls,flag: missed a full season,flag: negative strict record,flag: close call (<50% of re-rankings in top 10),% in top 10 minus final #10's,Normal (win % per average ball),Pressure (balls >= 1.5x),Pressure gap,Gap 80% range,Pressure balls,Normal balls,Gap flag
+batter,11,Nicholas Pooran,0.043,0.088,0.043,0.133,78.5,32.0,15.0,111,27,0.4,40.8,58.7,70.7,0.127,167,no,no,yes,-23.2,0.078,0.127,0.049,-0.26 to +0.42,167,1731,
+batter,12,Virat Kohli,0.039,0.075,0.039,0.111,83.0,18.8,15.0,89,29,31.4,28.5,40.1,74.2,0.151,130,no,no,yes,-36.4,0.04,0.151,0.111,-0.04 to +0.31,130,2315,
+bowler,11,Mujeeb Ur Rahman,0.018,0.086,0.018,0.153,53.4,22.4,15.0,35,18,5.6,39.9,54.5,0.0,0.212,72,no,no,yes,-19.6,0.196,0.212,0.016,-0.22 to +0.24,72,727,
+bowler,12,Mustafizur Rahman,0.014,0.066,0.014,0.118,72.5,27.8,14.5,66,25,2.5,15.8,81.7,34.7,0.056,128,no,no,yes,-14.2,0.114,0.056,-0.057,-0.46 to +0.31,128,1438,

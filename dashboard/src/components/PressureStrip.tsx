@@ -1,6 +1,7 @@
 import { scaleLinear } from 'd3-scale';
 import type { FieldGap, Pick, Role } from '../data';
 import { range, sideColour, signed, verdictLabel, verdictStyle } from '../format';
+import { pressureLine } from '../copy';
 
 interface Props { p: Pick; role: Role; field: FieldGap[]; domain: number; dataRange: string }
 
@@ -23,8 +24,9 @@ export function PressureStrip({ p, role, field, domain, dataRange }: Props) {
         <div><dt>Pressure</dt><dd><span className="num">{signed(q.pressure)}</span><span className="pstrip-balls">{q.balls_pressure.toLocaleString('en-IN')} balls</span></dd></div>
         <div className="pstrip-gap"><dt>Gap</dt><dd><span className="num">{signed(q.gap)}</span><span className="pstrip-balls">80% range {range(q.lo80, q.hi80)}</span></dd></div>
       </dl>
+      <p className="pstrip-plain">{pressureLine(p)}</p>
       <div className="pstrip-foot">
-        <span className="chip" style={{ background: vs.bg, color: vs.fg, borderColor: vs.border }}>{verdictLabel(q.verdict, dataRange)}</span>
+        <span className="chip" style={{ background: vs.bg, color: vs.fg, borderColor: vs.border }}>{verdictLabel(q.verdict, dataRange, q.balls_pressure)}</span>
         <figure className="pstrip-field">
           <svg width="100%" height={H} role="img" aria-label={label}>
             <line x1={at(0)} x2={at(0)} y1={2} y2={H - 2} stroke="#586080" strokeWidth={1} strokeDasharray="2 2" />

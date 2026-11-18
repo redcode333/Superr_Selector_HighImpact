@@ -38,6 +38,23 @@
 /superr/reports/final_v2/reference/*
 !/superr/reports/final_v2/reference/final_top10.csv
 !/superr/reports/final_v2/reference/key_numbers.json
+# v3 (pressure value above average, post-hoc): machine outputs only; no methodology report, no changes_v3.md
+!/superr/reports/final_v3/
+/superr/reports/final_v3/*
+!/superr/reports/final_v3/final_top10.csv
+!/superr/reports/final_v3/alternates.csv
+!/superr/reports/final_v3/key_numbers.json
+!/superr/reports/final_v3/phase9_summary.json
+!/superr/reports/final_v3/pressure_gap_top10.csv
+!/superr/reports/final_v3/pressure_gap_all_eligible.csv
+!/superr/reports/final_v3/v2_vs_v3.csv
+!/superr/reports/final_v3/failed_pressure_rule.csv
+!/superr/reports/final_v3/gap_stats.csv
+!/superr/reports/final_v3/verification.txt
+!/superr/reports/final_v3/reference/
+/superr/reports/final_v3/reference/*
+!/superr/reports/final_v3/reference/final_top10.csv
+!/superr/reports/final_v3/reference/key_numbers.json
 # v1 top 10 (read for the v1 -> v2 changes), the forward test, and the floor sensitivity table: single machine-output files
 !/superr/reports/final/
 /superr/reports/final/*

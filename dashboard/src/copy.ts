@@ -13,11 +13,14 @@ export const TAGLINE: keyof typeof TAGLINES = 'A';
 
 export const ROLE_PLURAL: Record<Role, string> = { batter: 'Batters', bowler: 'Bowlers' };
 
-/** Note for a top-10 player whose record is clearly worse under pressure (Phil Salt in the v2 lists). */
-export function worseNote(p: Pick, role: Role, range_: string): string | null {
-  if (p.group !== 'top 10' || p.pressure.verdict !== 'worse under pressure') return null;
-  return `The one top-10 ${role} who was clearly worse under pressure in ${range_} (gap ${signed(p.pressure.gap)}). `
-    + `He is picked for his overall value: a cautious rating of ${signed(p.cautious)}, in the top 10 in ${p.pct_top10.toFixed(0)}% of re-rankings.`;
+/** One plain sentence for every player: how he rates under pressure, how that compares with his usual level, and so what the gap is.
+ *  Shown wherever a verdict chip is, so "worse under pressure" is never printed without it. */
+export function pressureLine(p: Pick): string {
+  const q = p.pressure;
+  const under = q.pressure > 0 ? 'above average' : 'below average';
+  const level = Math.abs(q.gap) < 0.0005 ? 'in line with his usual level' : q.gap < 0 ? 'his usual level is higher' : 'above his usual level';
+  const joiner = q.gap < 0 ? '; ' : ', and ';
+  return `Rated ${under} under pressure (${signed(q.pressure)})${joiner}${level} (${signed(q.normal)}), so the gap is ${signed(q.gap)}.`;
 }
 
 export function honestNote(meta: Meta) {

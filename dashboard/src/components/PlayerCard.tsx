@@ -2,7 +2,6 @@ import { scaleLinear } from 'd3-scale';
 import { motion } from 'framer-motion';
 import type { FieldGap, Pick, Role } from '../data';
 import { Badge } from './Badge';
-import { worseNote } from '../copy';
 import { range, signed } from '../format';
 import { PressureStrip } from './PressureStrip';
 
@@ -17,7 +16,6 @@ interface Props {
 
 export function PlayerCard({ p, role, field, gapDomain, ratingMax, dataRange, onOpen }: Props) {
   const alt = p.group === 'alternate';
-  const note = worseNote(p, role, dataRange);
   const x = scaleLinear().domain([0, ratingMax]).range([0, 100]).clamp(true);
   return (
     <motion.article className={`pcard${alt ? ' pcard-alt' : ''}`} whileHover={{ y: -2 }} transition={{ duration: 0.15 }}>
@@ -46,7 +44,6 @@ export function PlayerCard({ p, role, field, gapDomain, ratingMax, dataRange, on
         </div>
       </div>
       <PressureStrip p={p} role={role} field={field} domain={gapDomain} dataRange={dataRange} />
-      {note && <p className="pcard-note">{note}</p>}
     </motion.article>
   );
 }

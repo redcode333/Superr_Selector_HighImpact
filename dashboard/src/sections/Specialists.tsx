@@ -6,7 +6,7 @@ import type { Specialists as Spec } from './types';
 
 const SHOW = 8;
 
-/** Role chips recomputed on the floor-50 eligible pool (build_specialists.py definitions). */
+/** Role chips recomputed on the eligible pool (build_specialists.py definitions). */
 export function SpecialistsSection({ sp, picks }: { sp: Spec; picks: Picks }) {
   const rm = useReducedMotion() ?? false;
   const chips = useMemo(() => {
@@ -28,7 +28,7 @@ export function SpecialistsSection({ sp, picks }: { sp: Spec; picks: Picks }) {
   const lowGood = c.metric === 'Economy';
   const oursIn = rows.slice(0, SHOW).filter((r) => ours.has(r.player_id)).length;
   return (
-    <Section id="specialists" title="Specialists" lede="Who leads each job among all floor-50 eligible players, against par for the same kind of ball. Our picks are marked.">
+    <Section id="specialists" title="Specialists" lede="Who leads each job among all eligible players, against par for the same kind of ball. Our picks are marked.">
       <div className="spec">
         {(['batter', 'bowler'] as Role[]).map((role) => (
           <div key={role} className="spec-chips" role="group" aria-label={role === 'batter' ? 'Batting roles' : 'Bowling roles'}>

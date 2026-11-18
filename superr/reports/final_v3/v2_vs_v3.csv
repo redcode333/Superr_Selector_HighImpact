@@ -1,0 +1,28 @@
+role,player_id,player,v2_rank,v3_rank,status,why,pressure_value,high_pressure_balls
+batter,6396,Tim David,1,1.0,stayed in the top 10,unchanged,0.3338,189
+batter,1699,Suryakumar Yadav,2,2.0,stayed in the top 10,unchanged,0.1356,194
+batter,6281,Abhishek Sharma,3,3.0,stayed in the top 10,unchanged,0.0945,103
+batter,4260,Heinrich Klaasen,4,4.0,stayed in the top 10,unchanged,0.3917,110
+batter,5553,Phil Salt,5,,left the top 10,pressure value -0.126 is not above average,-0.126,75
+batter,3647,Shreyas Iyer,6,5.0,stayed in the top 10,v2 rank 6 -> v3 rank 5,0.6727,150
+batter,813,Jos Buttler,7,6.0,stayed in the top 10,v2 rank 7 -> v3 rank 6,0.3773,90
+batter,7897,Namboori Tilak Varma,8,7.0,stayed in the top 10,v2 rank 8 -> v3 rank 7,0.0805,275
+batter,6288,Shubman Gill,9,,left the top 10,pressure value -0.082 is not above average,-0.0819,138
+batter,4708,Rinku Singh,10,8.0,stayed in the top 10,v2 rank 10 -> v3 rank 8,0.5586,102
+batter,768,Reeza Hendricks,11,9.0,entered the top 10,moved up from v2 rank 11: 2 players above him in v2 failed the rule,0.4367,71
+batter,838,Glenn Maxwell,12,10.0,entered the top 10,moved up from v2 rank 12: 2 players above him in v2 failed the rule,0.7505,64
+batter,3125,Nicholas Pooran,15,11.0,alternate (v3),v2 rank 15 -> v3 rank 11,0.1275,167
+batter,47,Virat Kohli,17,12.0,alternate (v3),v2 rank 17 -> v3 rank 12,0.1513,130
+bowler,2933,Jasprit Bumrah,1,1.0,stayed in the top 10,unchanged,0.1961,119
+bowler,4722,Rashid Khan,2,2.0,stayed in the top 10,unchanged,0.5549,164
+bowler,781,Sunil Narine,3,3.0,stayed in the top 10,unchanged,0.7086,121
+bowler,830,Josh Hazlewood,4,4.0,stayed in the top 10,unchanged,0.4919,155
+bowler,6256,Varun Chakravarthy,5,5.0,stayed in the top 10,unchanged,0.2741,159
+bowler,3644,Kuldeep Yadav,6,6.0,stayed in the top 10,unchanged,0.0934,149
+bowler,6669,Mohsin Khan,7,7.0,stayed in the top 10,unchanged,0.5919,64
+bowler,4900,Wanindu Hasaranga,8,8.0,stayed in the top 10,unchanged,0.2224,173
+bowler,2876,Axar Patel,9,9.0,stayed in the top 10,unchanged,0.1912,140
+bowler,4219,Krunal Pandya,10,10.0,stayed in the top 10,unchanged,0.3479,75
+bowler,360,Bhuvneshwar Kumar,11,,failed the rule,pressure value -0.017 is not above average,-0.0171,224
+bowler,6450,Mujeeb Ur Rahman,12,11.0,alternate (v3),v2 rank 12 -> v3 rank 11,0.212,72
+bowler,4373,Mustafizur Rahman,13,12.0,alternate (v3),v2 rank 13 -> v3 rank 12,0.0564,128

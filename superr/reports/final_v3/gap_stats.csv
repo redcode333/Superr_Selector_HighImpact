@@ -1,0 +1,5 @@
+role,list,pool_size,mean_gap_top10,mean_gap_rest_of_pool,top10_with_gap_above_0,top10_with_pressure_above_0,top10_80pct_range_excludes_0
+batter,v3 (with rule),42,0.2493,0.2661,7,10,4
+batter,v2 (without rule),71,0.0875,0.0719,5,8,4
+bowler,v3 (with rule),47,0.1728,0.1487,8,10,2
+bowler,v2 (without rule),81,0.1728,-0.0407,8,10,2

@@ -15,7 +15,7 @@ import pandas as pd
 
 HERE = os.path.dirname(os.path.abspath(__file__)); DASH = os.path.dirname(HERE); PROJECT = os.path.dirname(DASH)
 SUPERR = os.path.join(PROJECT, "superr")
-FIN2 = os.path.join(SUPERR, "reports", "final_v2"); FIN1 = os.path.join(SUPERR, "reports", "final")
+FIN2 = os.path.join(SUPERR, "reports", "final_v2"); FIN3 = os.path.join(SUPERR, "reports", "final_v3"); FIN1 = os.path.join(SUPERR, "reports", "final")
 DATA = os.path.join(DASH, "public", "data"); HAND = os.path.join(DASH, "_handoff")
 # the design pages and hero_p.json live in dashboard/_handoff/, which is not in the repository: without it the checks that read them are skipped
 HAVE_DESIGN = all(os.path.exists(os.path.join(HAND, *p)) for p in (("data_builders", "hero_p.json"), ("design", "TimDavid.dc.html"), ("design", "Bumrah.dc.html"), ("design", "Main.dc.html")))
@@ -34,14 +34,15 @@ def close(a, b, tol): return a is not None and b is not None and abs(float(a) - 
 
 
 meta, picks, dives, sim, sb, mu, sp = (J(n) for n in ("meta.json", "picks.json", "players.json", "sim.json", "sandbox.json", "matchups.json", "specialists.json"))
-kn = json.load(open(os.path.join(FIN2, "key_numbers.json")))
-s8 = json.load(open(os.path.join(FIN2, "phase8_summary.json")))
+kn = json.load(open(os.path.join(FIN3, "key_numbers.json")))
+s8 = json.load(open(os.path.join(FIN3, "phase9_summary.json")))
 fw6c = json.load(open(os.path.join(SUPERR, "reports", "phase5_v2", "phase6c_gap_forward.json")))
-t2 = pd.read_csv(os.path.join(FIN2, "final_top10.csv")); a2 = pd.read_csv(os.path.join(FIN2, "alternates.csv"))
+t2 = pd.read_csv(os.path.join(FIN3, "final_top10.csv")); a2 = pd.read_csv(os.path.join(FIN3, "alternates.csv"))
+t2v = pd.read_csv(os.path.join(FIN2, "final_top10.csv"))   # the v2 list (history: v1 -> v2 -> v3)
 t1 = pd.read_csv(os.path.join(FIN1, "final_top10.csv"))
-pg = pd.read_csv(os.path.join(FIN2, "pressure_gap_top10.csv")); pa = pd.read_csv(os.path.join(FIN2, "pressure_gap_all_eligible.csv"))
+pg = pd.read_csv(os.path.join(FIN3, "pressure_gap_top10.csv")); pa = pd.read_csv(os.path.join(FIN3, "pressure_gap_all_eligible.csv"))
 fs = pd.read_csv(os.path.join(P7, "floor_sensitivity.csv"))
-ver = [l.split("\t")[0] for l in open(os.path.join(FIN2, "verification.txt"), encoding="utf-8").read().splitlines() if l]
+ver = [l.split("\t")[0] for l in open(os.path.join(FIN3, "verification.txt"), encoding="utf-8").read().splitlines() if l]
 SIDE = {"batter": "bat", "bowler": "bowl"}
 disp = lambda n: str(n).replace("Namboori ", "")
 
@@ -59,7 +60,7 @@ for role, R in picks["roles"].items():
         check("A", f"{role} {p['name']} high-pressure balls = strict-set balls", p["high_pressure_balls"] == x["strict-set balls"])
         check("A", f"{role} {p['name']} high-pressure balls >= floor", p["high_pressure_balls"] >= 50)
     ka = kn["alternates"][SIDE[role]]
-    check("A", f"{role} alternates = package rule", [p["name_full"] for p in alt] == [x["player"] for x in ka] == list(a2[a2.role == role].player))
+    check("A", f"{role} alternates = the next two eligible ranks (11, 12)", [p["name_full"] for p in alt] == [x["player"] for x in ka] == list(a2[a2.role == role].player) and [p["rank"] for p in alt] == [11, 12])
     for p, x in zip(alt, ka):
         check("A", f"{role} alternate {p['name']} rank / %", p["rank"] == x["rank"] and close(p["pct_top10"], x["pct_top10"], 1e-9))
     for p in P:
@@ -97,7 +98,7 @@ for s in ("bat", "bowl"):
 check("A", "no-importance line matches the data", f"{meta['balls']['without_importance_pct']:.1f}%" in meta["how_it_works_lines"]["no_importance"] and 3 <= meta["balls"]["without_importance_pct"] <= 4)
 check("A", "verification count", meta["verification"] == {"passed": sum(v == "PASS" for v in ver), "total": len(ver)} and meta["verification"]["passed"] == meta["verification"]["total"])
 for role in ("batter", "bowler"):
-    o, n = set(map(disp, t1[t1.role == role].player)), set(map(disp, t2[t2.role == role].player))
+    o, n = set(map(disp, t1[t1.role == role].player)), set(map(disp, t2v[t2v.role == role].player))
     sw = meta["changes"]["swaps"][role]
     check("A", f"{role} v1 -> v2 swaps", {x["name"] for x in sw["out"]} == o - n and {x["name"] for x in sw["in"]} == n - o)
     for x in sw["out"]: check("A", f"{role} {x['name']} left because under the floor", x["high_pressure_balls"] < 50)
@@ -112,14 +113,18 @@ check("A", "floor 75: Mohsin Khan leaves the bowling top 10 (no '50 = 75' claim 
 # ======================================================================== A3 sandbox
 for fl in sb["floors"]:
     for role in ("batter", "bowler"):
-        L = sb["lists"][f"{role}|50|5|cautious|{fl}"]
+        L = sb["lists"][f"{role}|50|5|cautious|{fl}|0"]
         ref = fs[(fs.floor == fl) & (fs.role == role)].sort_values("rank")
         check("A", f"sandbox ours floor {fl} {role} = floor_sensitivity (top 12, order)", [x["player_id"] for x in L["top"]] == list(ref.player_id.head(12)))
         check("A", f"sandbox ours floor {fl} {role} eligible count", L["eligible"] == len(ref))
 for role in ("batter", "bowler"):
-    check("A", f"sandbox floor 50 {role} = final_v2", [x["name"] for x in sb["lists"][f"{role}|50|5|cautious|50"]["top"][:10]] == list(map(disp, t2[t2.role == role].sort_values("rank (eligible)").player)))
-    check("A", f"sandbox floor 0 {role} = v1 final", [x["name"] for x in sb["lists"][f"{role}|50|5|cautious|0"]["top"][:10]] == list(map(disp, t1[t1.role == role].sort_values("rank (eligible)").player)))
-check("A", "sandbox has every combination", len(sb["lists"]) == 2 * 3 * 3 * 2 * 5)
+    check("A", f"sandbox floor 50, rule off {role} = final_v2", [x["name"] for x in sb["lists"][f"{role}|50|5|cautious|50|0"]["top"][:10]] == list(map(disp, t2v[t2v.role == role].sort_values("rank (eligible)").player)))
+    check("A", f"sandbox floor 50, rule on {role} = final_v3 (ours)", [x["name"] for x in sb["lists"][f"{role}|50|5|cautious|50|1"]["top"][:10]] == list(map(disp, t2[t2.role == role].sort_values("rank (eligible)").player))
+          and [x["name"] for x in sb["lists"][f"{role}|50|5|cautious|50|1"]["top"][10:12]] == list(map(disp, a2[a2.role == role].sort_values("rank (eligible)").player))
+          and sb["lists"][f"{role}|50|5|cautious|50|1"]["eligible"] == kn["eligibility"][SIDE[role]]["eligible"])
+    check("A", f"sandbox floor 0, rule off {role} = v1 final", [x["name"] for x in sb["lists"][f"{role}|50|5|cautious|0|0"]["top"][:10]] == list(map(disp, t1[t1.role == role].sort_values("rank (eligible)").player)))
+check("A", "sandbox ours = floor 50, rule on", sb["ours"] == {"own": 50, "m": 5, "key": "cautious", "floor": 50, "pp": 1})
+check("A", "sandbox has every combination", len(sb["lists"]) == 2 * 3 * 3 * 2 * 5 * 2)
 
 # ======================================================================== A4 simulator
 hero = json.load(open(os.path.join(HAND, "data_builders", "hero_p.json"))) if HAVE_DESIGN else None
@@ -142,10 +147,11 @@ if HAVE_DESIGN: check("A", "league death odds = hero_p.json", all(close(a, b, 1e
 base = 100 * (1 - chase(lg, lg, 12, 6, 18))
 check("A", "average death bowler, 18 off 12, 6 wkts = 33.0%", round(base, 1) == 33.0 == sim["base_defend"]["18_6"], f"{base:.3f}")
 if HAVE_DESIGN: check("A", "same with the published league odds = 33.0%", round(100 * (1 - chase(hero["league"], hero["league"], 12, 6, 18)), 1) == 33.0)
-check("A", "simulator bowlers = top 10 + bowling alternate", [b["name"] for b in sim["bowlers"]] == [p["name"] for p in picks["roles"]["bowler"]["players"]])
+check("A", "simulator bowlers = top 10 + the two bowling alternates", [b["name"] for b in sim["bowlers"]] == [p["name"] for p in picks["roles"]["bowler"]["players"]])
 for b in sim["bowlers"]:
-    hp = hero["P"].get(b["name"]) if HAVE_DESIGN else b["p"]      # without hero_p.json the defend % is checked on the stored odds
-    if HAVE_DESIGN: check("A", f"sim {b['name']} odds = hero_p.json (K = 120)", hp is not None and all(close(x, y, 1e-5) for x, y in zip(b["p"], hp)))
+    on_design = HAVE_DESIGN and b["name"] in hero["P"]       # bowlers added after the design pages (v3 alternates) have no published odds to port-check
+    hp = hero["P"][b["name"]] if on_design else b["p"]        # without a published entry the defend % is checked on the stored odds
+    if on_design: check("A", f"sim {b['name']} odds = hero_p.json (K = 120)", all(close(x, y, 1e-5) for x, y in zip(b["p"], hp)))
     n, cnt = b["n"], [b["counts"][k] for k in C]
     check("A", f"sim {b['name']} odds = shrinkage of counts", all(close(p_, (c + 120 * l) / (n + 120), 1e-5) for p_, c, l in zip(b["p"], cnt, lg)))
     for s in sim["situations"]:
@@ -291,16 +297,46 @@ check("A", "no photos shipped", not os.path.exists(os.path.join(DASH, "public", 
 
 # ======================================================================== A6 head-to-head + specialists
 for side, key in (("bat", "batters"), ("bowl", "bowlers")):
-    T = pd.read_csv(os.path.join(SUPERR, "out", "model_v2", f"phase4_rankings_{side}_all_players_technical.csv"))
+    T = pd.read_csv(os.path.join(SUPERR, "out", "model_v3", f"phase4_rankings_{side}_all_players_technical.csv"))
     ref = list(T[T.eligible].nsmallest(25, "rank_eligible").player_id)
-    check("A", f"head-to-head {key} = floor-50 top 25", [x["player_id"] for x in mu[key]] == ref)
+    check("A", f"head-to-head {key} = top 25 of the v3 pool", [x["player_id"] for x in mu[key]] == ref)
     el = set(T[T.eligible].player_id)
     rows = [r for r in sp["rows"] if r["role"] == {"bat": "batter", "bowl": "bowler"}[side]]
-    check("A", f"specialists {key} all floor-50 eligible", len(rows) > 0 and all(r["player_id"] in el for r in rows))
+    check("A", f"specialists {key} all v3 eligible", len(rows) > 0 and all(r["player_id"] in el for r in rows))
     check("A", f"specialists {key} meet each chip's minimum", all(r["balls"] >= r["min_balls"] for r in rows))
 ids_b = {x["player_id"] for x in mu["batters"]}; ids_w = {x["player_id"] for x in mu["bowlers"]}
 check("A", "head-to-head pairs within the rosters", all(p["batter_id"] in ids_b and p["bowler_id"] in ids_w for p in mu["pairs"]))
 check("A", "head-to-head small-sample rule 12 balls", mu["min_balls"] == 12)
+
+# ======================================================================== A7 the pressure-positive rule (v3), checked independently
+PR = meta["changes"]["pressure_rule"]
+for side, role in (("bat", "batter"), ("bowl", "bowler")):
+    T2 = pd.read_csv(os.path.join(SUPERR, "out", "model_v2", f"phase4_rankings_{side}_all_players_technical.csv"), index_col=0)
+    T3 = pd.read_csv(os.path.join(SUPERR, "out", "model_v3", f"phase4_rankings_{side}_all_players_technical.csv"), index_col=0)
+    e2 = T2[T2.eligible == True]
+    pv = 100 * e2.raw_value          # the strict-set pressure record: 100 x sum(v_adj) / sum(LI), LI >= 1.5 (Phase 6b definition)
+    passes = pv > 0
+    expect = e2[passes].sort_values("rank_eligible")     # the frozen v2 ordering with the rule applied and nothing else changed
+    got = T3[T3.eligible == True].sort_values("rank_eligible")
+    check("A", f"{role}s v3 pool = v2 floor-50 pool with pressure value > 0, same order", list(got.index) == list(expect.index) and list(got.rank_eligible) == list(range(1, len(got) + 1)))
+    check("A", f"{role}s every v3 player has pressure value > 0 (picks.json too)", bool((100 * got.raw_value > 0).all()) and all(p["pressure"]["pressure"] > 0 for p in picks["roles"][role]["players"]))
+    check("A", f"{role}s every player removed by the rule has pressure value <= 0", bool((pv[~passes] <= 0).all()) and len(pv[~passes]) == kn["eligibility"][side]["fail_pressure_rule"] == PR["failed"][role])
+    check("A", f"{role}s rule applied to everyone alike: nobody outside the floor-50 pool is added", set(got.index) <= set(e2.index))
+    check("A", f"{role}s pool sizes", PR["pool_before"][role] == len(e2) == kn["eligibility"][side]["eligible_floor50_before_pressure_rule"] and PR["pool_after"][role] == len(got))
+    v2top = list(e2.sort_values("rank_eligible").index)[:10]
+    v3top = list(got.index[:10])
+    check("A", f"{role}s left / entered match the lists", [x["name"] for x in PR["left"][role]] == [disp(T2.loc[i, "name"]) for i in v2top if i not in v3top]
+          and [x["name"] for x in PR["entered"][role]] == [disp(T3.loc[i, "name"]) for i in v3top if i not in v2top])
+    check("A", f"{role}s 'with' and 'without' lists on the page", PR["lists"][role]["without_rule"]["top10"] == [disp(T2.loc[i, "name"]) for i in v2top]
+          and PR["lists"][role]["with_rule"]["top10"] == [disp(T3.loc[i, "name"]) for i in v3top])
+    for x in PR["left"][role]:
+        check("A", f"{role} {x['name']} left because his pressure value is not above average", x["pressure_value"] <= 0)
+    check("A", f"{role}s 12 picks, all above average under pressure", len(picks["roles"][role]["players"]) == 12 and all(p["pressure"]["pressure"] > 0 for p in picks["roles"][role]["players"]))
+check("A", "Tilak Varma is still player 7897", any(p["player_id"] == 7897 and p["name"] == "Tilak Varma" for p in picks["roles"]["batter"]["players"]))
+check("A", "nobody removed by the rule is still a pick", not ({x["name"] for r in PR["left"].values() for x in r} & {p["name"] for R in picks["roles"].values() for p in R["players"]}))
+fw_ = meta["forward_test"]; FP = "eligible only, >= 20 each period"
+check("A", "forward-test headline numbers (floor-50 pool, before the rule): batters +0.086 [-0.212, +0.344], bowlers -0.100 [-0.342, +0.139]",
+      all(close(fw_[r][FP][k], v, 5e-4) for r, k, v in (("batter", "rho", 0.086), ("batter", "lo95", -0.212), ("batter", "hi95", 0.344), ("bowler", "rho", -0.100), ("bowler", "lo95", -0.342), ("bowler", "hi95", 0.139))))
 
 # ======================================================================== B port check against the design pages
 def js_array(html, name):
@@ -337,14 +373,15 @@ if HAVE_DESIGN:
     check("B", "Bumrah best plan", JB["planner"]["best"]["overs"] == json.loads(m.group(1)) and round(JB["planner"]["best"]["saving"], 1) == float(m.group(2)),
           f"{JB['planner']['best']} vs {m.group(1)} {m.group(2)}")
     info = json.loads(re.search(r"const INFO = (\{.*?\});", mn, re.S).group(1).replace("'", '"'))
-    for b in sim["bowlers"]:
+    check("B", "bowlers missing from the design page's 19th-over list are only v3 alternates", all(b["group"] == "alternate" for b in sim["bowlers"] if b["name"] not in info))
+    for b in [b for b in sim["bowlers"] if b["name"] in info]:
         i = info.get(b["name"])
         check("B", f"19th-over list {b['name']}", i is not None and b["rank"] == i[0] and close(b["death_econ"], float(i[1]), 0.005) and close(b["dot_pct"], float(i[2]), 0.05)
               and close(b["boundary_pct"], float(i[3]), 0.05) and close(b["balls_per_wkt"], float(i[4]), 0.05) and b["death_balls"] == i[5], f"{b} vs {i}")
 
 # ======================================================================== report
 print("CHECK_DATA")
-print(f"  Part A  headline numbers vs final_v2 / CSVs / engine / consistency: {RES['A'][0]} of {RES['A'][1]} pass")
+print(f"  Part A  headline numbers vs final_v3 / CSVs / engine / consistency: {RES['A'][0]} of {RES['A'][1]} pass")
 print(f"  Part B  port check vs the design pages' example numbers:            {RES['B'][0]} of {RES['B'][1]} pass" if HAVE_DESIGN
       else "  Part B  port check: design files not present (dashboard/_handoff/ is not in the repository), skipped; hero_p.json comparisons skipped too")
 print(f"  Simulator: average death bowler, 18 off 12, 6 wkts = {base:.2f}% -> {round(base, 1)}%")

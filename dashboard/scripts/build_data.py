@@ -1,6 +1,6 @@
 """SupeRR Selector dashboard - data layer.
 
-Reads the frozen v2 package (superr/reports/final_v2, superr/out/model_v2), the ball file (superr/out/deliveries_clean.csv),
+Reads the frozen v3 package (superr/reports/final_v3, superr/out/model_v3; v2 and v1 only for the change history), the ball file (superr/out/deliveries_clean.csv),
 the Phase 3 ball values (superr/out/model/phase3_ball_values_adj.parquet), outputs/phase7_exposure_floor/floor_sensitivity.csv
 Writes dashboard/public/data/*.json. Player badges are generated from each player's own numbers (scripts/badges.py); no images.
 
@@ -32,8 +32,9 @@ DASH = os.path.dirname(HERE)
 PROJECT = os.path.dirname(DASH)
 SUPERR = os.path.join(PROJECT, "superr")
 FIN2 = os.path.join(SUPERR, "reports", "final_v2")
+FIN3 = os.path.join(SUPERR, "reports", "final_v3")
 FIN1 = os.path.join(SUPERR, "reports", "final")
-MODEL2 = os.path.join(SUPERR, "out", "model_v2")
+MODEL3 = os.path.join(SUPERR, "out", "model_v3")
 P7 = os.path.join(PROJECT, "outputs", "phase7_exposure_floor")
 HANDOFF = os.path.join(DASH, "_handoff")
 OUT = os.path.join(DASH, "public", "data")
@@ -118,10 +119,10 @@ def load():
 
 
 def lists():
-    """Floor-50 package: top 10s, package alternates, technical tables."""
-    t2 = pd.read_csv(os.path.join(FIN2, "final_top10.csv"))
-    a2 = pd.read_csv(os.path.join(FIN2, "alternates.csv"))
-    tech = {s: pd.read_csv(os.path.join(MODEL2, f"phase4_rankings_{s}_all_players_technical.csv")) for s in ROLE}
+    """v3 package (floor 50 + pressure value above average): top 10s, the next two eligible ranks as alternates, technical tables."""
+    t2 = pd.read_csv(os.path.join(FIN3, "final_top10.csv"))
+    a2 = pd.read_csv(os.path.join(FIN3, "alternates.csv"))
+    tech = {s: pd.read_csv(os.path.join(MODEL3, f"phase4_rankings_{s}_all_players_technical.csv")) for s in ROLE}
     return t2, a2, tech
 
 
@@ -132,8 +133,8 @@ def initials(name):
 
 # ---------------------------------------------------------------- picks + pressure
 def picks_and_gaps(t2, a2, tech):
-    pg = pd.read_csv(os.path.join(FIN2, "pressure_gap_top10.csv"))
-    pa = pd.read_csv(os.path.join(FIN2, "pressure_gap_all_eligible.csv"))
+    pg = pd.read_csv(os.path.join(FIN3, "pressure_gap_top10.csv"))
+    pa = pd.read_csv(os.path.join(FIN3, "pressure_gap_all_eligible.csv"))
     fs = pd.read_csv(os.path.join(P7, "floor_sensitivity.csv"))
     hp50 = fs[fs.floor == 50].set_index(["role", "player_id"]).high_pressure_balls
     out = {"unit": UNIT, "roles": {}}
@@ -175,12 +176,13 @@ def picks_and_gaps(t2, a2, tech):
 
 # ---------------------------------------------------------------- changes / meta
 def changes_and_meta(tech):
-    kn = json.load(open(os.path.join(FIN2, "key_numbers.json")))
-    s8 = json.load(open(os.path.join(FIN2, "phase8_summary.json")))
+    kn = json.load(open(os.path.join(FIN3, "key_numbers.json")))
+    s8 = json.load(open(os.path.join(FIN3, "phase9_summary.json")))
     fs = pd.read_csv(os.path.join(P7, "floor_sensitivity.csv"))
     t1 = pd.read_csv(os.path.join(FIN1, "final_top10.csv")); t2 = pd.read_csv(os.path.join(FIN2, "final_top10.csv"))
-    ver = [l.split("\t") for l in open(os.path.join(FIN2, "verification.txt"), encoding="utf-8").read().splitlines() if l]
+    ver = [l.split("\t") for l in open(os.path.join(FIN3, "verification.txt"), encoding="utf-8").read().splitlines() if l]
     hp = fs.set_index(["floor", "role", "player"]).high_pressure_balls
+    v23 = pd.read_csv(os.path.join(FIN3, "v2_vs_v3.csv"))
     swaps = {}
     for role in ROLE.values():
         o, n = set(t1[t1.role == role].player), set(t2[t2.role == role].player)
@@ -203,15 +205,26 @@ def changes_and_meta(tech):
         fw[role] = {k: {"players": v["players"], "rho": v["gap_rho"][0], "lo95": v["gap_rho"][1], "hi95": v["gap_rho"][2]}
                     for k, v in d_.items()}
     verdicts = s8["verdicts"]
+    pressure_rule = {"decided": "18 November", "left": {}, "entered": {}, "failed": {}, "pool_before": {}, "pool_after": {},
+                     "lists": {r: {w: {k: [disp(n) for n in v] for k, v in s8["lists"][w][r].items()} for w in ("without_rule", "with_rule")} for r in ROLE.values()}}
+    for side, role in ROLE.items():
+        x = v23[v23.role == role]
+        pressure_rule["left"][role] = [{"name": disp(r.player), "v2_rank": int(r.v2_rank), "pressure_value": float(r.pressure_value), "high_pressure_balls": int(r.high_pressure_balls)}
+                                       for r in x[x.status == "left the top 10"].itertuples()]
+        pressure_rule["entered"][role] = [{"name": disp(r.player), "v2_rank": int(r.v2_rank), "v3_rank": int(r.v3_rank), "pressure_value": float(r.pressure_value)}
+                                          for r in x[x.status == "entered the top 10"].itertuples()]
+        e = kn["eligibility"][side]
+        pressure_rule["failed"][role] = e["fail_pressure_rule"]; pressure_rule["pool_before"][role] = e["eligible_floor50_before_pressure_rule"]
+        pressure_rule["pool_after"][role] = e["eligible"]
     meta = {
         "title": "SupeRR Selector · Season 2, Round 1", "data_range": "2022–26", "last_built": date.today().isoformat(),
         "unit": UNIT, "rating_unit": "win-probability points per average ball", "floor": 50, "li_pressure": 1.5,
-        "rules": {"own_share_min_pct": 50, "matches_2025_26_min": 5, "high_pressure_balls_min": 50},
+        "rules": {"own_share_min_pct": 50, "matches_2025_26_min": 5, "high_pressure_balls_min": 50, "pressure_value_above_average": True},
         "eligibility": kn["eligibility"],
         "verification": {"passed": sum(v[0] == "PASS" for v in ver), "total": len(ver)},
         "forward_test": fw, "forward_confirmed": {ROLE[s]: bool(kn["pressure_gap_forward_test"][s]["confirmed"]) for s in ROLE},
         "verdicts": verdicts, "chance_share_pct": 20,
-        "changes": {"swaps": swaps, "sensitivity": sens},
+        "changes": {"swaps": swaps, "sensitivity": sens, "pressure_rule": pressure_rule},
         "data_source": "Supplied SupeRR ball-by-ball data pack (2022–26, IPL and T20 internationals), matched to Cricsheet; "
                        "weather from Open-Meteo, grounds from GeoNames.",
     }
@@ -466,14 +479,14 @@ def simulator(d, a, bowlers):
 # ---------------------------------------------------------------- sandbox
 def sandbox(tech):
     out = {"own_share_pct": [45, 50, 55], "matches_2025_26": [3, 5, 8], "keys": ["cautious", "projected"], "floors": [0, 30, 50, 75, 100],
-           "ours": {"own": 50, "m": 5, "key": "cautious", "floor": 50}, "lists": {}}
+           "pressure_rule": [0, 1], "ours": {"own": 50, "m": 5, "key": "cautious", "floor": 50, "pp": 1}, "lists": {}}
     for side, role in ROLE.items():
         T = tech[side]
-        for own, m, key, fl in itertools.product(out["own_share_pct"], out["matches_2025_26"], out["keys"], out["floors"]):
-            el = T[(T.own_share >= own / 100) & (T.matches_2025_26 >= m) & (T.n_p >= fl)]
+        for own, m, key, fl, pp in itertools.product(out["own_share_pct"], out["matches_2025_26"], out["keys"], out["floors"], out["pressure_rule"]):
+            el = T[(T.own_share >= own / 100) & (T.matches_2025_26 >= m) & (T.n_p >= fl) & ((T.pressure_value > 0) if pp else True)]
             order = ["cautious", "projected"] if key == "cautious" else ["projected", "cautious"]
             top = el.sort_values(order, ascending=False).head(12)
-            out["lists"][f"{role}|{own}|{m}|{key}|{fl}"] = {
+            out["lists"][f"{role}|{own}|{m}|{key}|{fl}|{pp}"] = {
                 "eligible": int(len(el)),
                 "top": [{"player_id": int(r.player_id), "name": disp(r.name), "value": round(100 * float(getattr(r, key)), 3),
                          "high_pressure_balls": int(r.n_p)} for r in top.itertuples()]}
